@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Devtools Console 面板输入了 1+1 ，浏览器内部发生了什么？ | Gahing&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="/img/favicon.ico">
+    <meta name="description" content="前端技术博客。包括大前端、服务端、通用技术">
+    <meta name="keywords" content="前端博客">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="/assets/css/0.styles.4de15886.css" as="style"><link rel="preload" href="/assets/js/app.5d68b1ec.js" as="script"><link rel="preload" href="/assets/js/2.37b38cac.js" as="script"><link rel="preload" href="/assets/js/3.08236b00.js" as="script"><link rel="preload" href="/assets/js/16.be1d4e10.js" as="script"><link rel="prefetch" href="/assets/js/10.e8649dc1.js"><link rel="prefetch" href="/assets/js/100.ad1832d4.js"><link rel="prefetch" href="/assets/js/101.2fa5bf7f.js"><link rel="prefetch" href="/assets/js/102.4b06e3e8.js"><link rel="prefetch" href="/assets/js/103.858e3b13.js"><link rel="prefetch" href="/assets/js/104.b0c52a24.js"><link rel="prefetch" href="/assets/js/105.b1f90aa4.js"><link rel="prefetch" href="/assets/js/106.243ee020.js"><link rel="prefetch" href="/assets/js/107.c3fee5ce.js"><link rel="prefetch" href="/assets/js/108.b6348f22.js"><link rel="prefetch" href="/assets/js/109.1717e33d.js"><link rel="prefetch" href="/assets/js/11.3cf9fe4f.js"><link rel="prefetch" href="/assets/js/110.fc60f765.js"><link rel="prefetch" href="/assets/js/111.0e83d6bd.js"><link rel="prefetch" href="/assets/js/112.b3af8da0.js"><link rel="prefetch" href="/assets/js/113.15158869.js"><link rel="prefetch" href="/assets/js/114.e2f313a3.js"><link rel="prefetch" href="/assets/js/115.b9077666.js"><link rel="prefetch" href="/assets/js/116.66de86d6.js"><link rel="prefetch" href="/assets/js/117.20816a15.js"><link rel="prefetch" href="/assets/js/118.f47059df.js"><link rel="prefetch" href="/assets/js/119.36c4b2ec.js"><link rel="prefetch" href="/assets/js/12.72bd9ee3.js"><link rel="prefetch" href="/assets/js/120.7c2f8c08.js"><link rel="prefetch" href="/assets/js/121.b5893297.js"><link rel="prefetch" href="/assets/js/122.21320508.js"><link rel="prefetch" href="/assets/js/123.124d8f31.js"><link rel="prefetch" href="/assets/js/124.a46edfc6.js"><link rel="prefetch" href="/assets/js/125.7ee73a5d.js"><link rel="prefetch" href="/assets/js/126.c90c4000.js"><link rel="prefetch" href="/assets/js/127.ea491c44.js"><link rel="prefetch" href="/assets/js/128.d8a80fd0.js"><link rel="prefetch" href="/assets/js/129.ad9ea5a6.js"><link rel="prefetch" href="/assets/js/13.522b5f2a.js"><link rel="prefetch" href="/assets/js/130.3168b311.js"><link rel="prefetch" href="/assets/js/131.754679d0.js"><link rel="prefetch" href="/assets/js/14.6ff58dd8.js"><link rel="prefetch" href="/assets/js/15.e80b8875.js"><link rel="prefetch" href="/assets/js/17.a29af532.js"><link rel="prefetch" href="/assets/js/18.7d34e92a.js"><link rel="prefetch" href="/assets/js/19.9658029d.js"><link rel="prefetch" href="/assets/js/20.74f17d69.js"><link rel="prefetch" href="/assets/js/21.da425a6d.js"><link rel="prefetch" href="/assets/js/22.13bbd12e.js"><link rel="prefetch" href="/assets/js/23.b2e1dd30.js"><link rel="prefetch" href="/assets/js/24.b8fb20b6.js"><link rel="prefetch" href="/assets/js/25.5d19a658.js"><link rel="prefetch" href="/assets/js/26.278de21b.js"><link rel="prefetch" href="/assets/js/27.ae842632.js"><link rel="prefetch" href="/assets/js/28.836462ce.js"><link rel="prefetch" href="/assets/js/29.0ff4ff24.js"><link rel="prefetch" href="/assets/js/30.19980451.js"><link rel="prefetch" href="/assets/js/31.99be8a2e.js"><link rel="prefetch" href="/assets/js/32.2e090a5f.js"><link rel="prefetch" href="/assets/js/33.0cf865a3.js"><link rel="prefetch" href="/assets/js/34.911cb204.js"><link rel="prefetch" href="/assets/js/35.df396139.js"><link rel="prefetch" href="/assets/js/36.82fd04f9.js"><link rel="prefetch" href="/assets/js/37.f5eb7605.js"><link rel="prefetch" href="/assets/js/38.23eadc1f.js"><link rel="prefetch" href="/assets/js/39.48614a45.js"><link rel="prefetch" href="/assets/js/4.4ecc12a4.js"><link rel="prefetch" href="/assets/js/40.c7562647.js"><link rel="prefetch" href="/assets/js/41.fe0ad139.js"><link rel="prefetch" href="/assets/js/42.f8bd609a.js"><link rel="prefetch" href="/assets/js/43.cca34e74.js"><link rel="prefetch" href="/assets/js/44.85dcf3b0.js"><link rel="prefetch" href="/assets/js/45.e6e5f354.js"><link rel="prefetch" href="/assets/js/46.4bfc8e76.js"><link rel="prefetch" href="/assets/js/47.c91a4558.js"><link rel="prefetch" href="/assets/js/48.a32a52e5.js"><link rel="prefetch" href="/assets/js/49.03f1527c.js"><link rel="prefetch" href="/assets/js/5.7e641334.js"><link rel="prefetch" href="/assets/js/50.3f712ff4.js"><link rel="prefetch" href="/assets/js/51.f82d7dbf.js"><link rel="prefetch" href="/assets/js/52.25be37c4.js"><link rel="prefetch" href="/assets/js/53.65374e87.js"><link rel="prefetch" href="/assets/js/54.dcd5fe9c.js"><link rel="prefetch" href="/assets/js/55.aefec747.js"><link rel="prefetch" href="/assets/js/56.0ea7577f.js"><link rel="prefetch" href="/assets/js/57.028a8bd0.js"><link rel="prefetch" href="/assets/js/58.2b9742ca.js"><link rel="prefetch" href="/assets/js/59.a8a642f7.js"><link rel="prefetch" href="/assets/js/6.31cd8e5e.js"><link rel="prefetch" href="/assets/js/60.6cf6e557.js"><link rel="prefetch" href="/assets/js/61.ddb09d47.js"><link rel="prefetch" href="/assets/js/62.87f8751a.js"><link rel="prefetch" href="/assets/js/63.248d7439.js"><link rel="prefetch" href="/assets/js/64.1b0f8d72.js"><link rel="prefetch" href="/assets/js/65.50913974.js"><link rel="prefetch" href="/assets/js/66.7929303c.js"><link rel="prefetch" href="/assets/js/67.c1d26194.js"><link rel="prefetch" href="/assets/js/68.d68b9036.js"><link rel="prefetch" href="/assets/js/69.e8b78ded.js"><link rel="prefetch" href="/assets/js/7.fd382273.js"><link rel="prefetch" href="/assets/js/70.f06ec5bd.js"><link rel="prefetch" href="/assets/js/71.356dca8c.js"><link rel="prefetch" href="/assets/js/72.f11736f5.js"><link rel="prefetch" href="/assets/js/73.5f0b99b7.js"><link rel="prefetch" href="/assets/js/74.ba1c2f94.js"><link rel="prefetch" href="/assets/js/75.1eaaf981.js"><link rel="prefetch" href="/assets/js/76.f2818e55.js"><link rel="prefetch" href="/assets/js/77.54a7ed46.js"><link rel="prefetch" href="/assets/js/78.0a5f7eb7.js"><link rel="prefetch" href="/assets/js/79.2f1bccab.js"><link rel="prefetch" href="/assets/js/8.314cc161.js"><link rel="prefetch" href="/assets/js/80.62329a8c.js"><link rel="prefetch" href="/assets/js/81.7827eb97.js"><link rel="prefetch" href="/assets/js/82.f470224f.js"><link rel="prefetch" href="/assets/js/83.2cbb5466.js"><link rel="prefetch" href="/assets/js/84.5be01950.js"><link rel="prefetch" href="/assets/js/85.fdca66b9.js"><link rel="prefetch" href="/assets/js/86.5a928b2b.js"><link rel="prefetch" href="/assets/js/87.56eabeac.js"><link rel="prefetch" href="/assets/js/88.46106dcb.js"><link rel="prefetch" href="/assets/js/89.b20f2b05.js"><link rel="prefetch" href="/assets/js/9.f36db1bf.js"><link rel="prefetch" href="/assets/js/90.7f3bd8d6.js"><link rel="prefetch" href="/assets/js/91.d6a4755f.js"><link rel="prefetch" href="/assets/js/92.23f2015a.js"><link rel="prefetch" href="/assets/js/93.9a17caf0.js"><link rel="prefetch" href="/assets/js/94.49b483ca.js"><link rel="prefetch" href="/assets/js/95.a80d2f18.js"><link rel="prefetch" href="/assets/js/96.35468324.js"><link rel="prefetch" href="/assets/js/97.fa78373b.js"><link rel="prefetch" href="/assets/js/98.1570b994.js"><link rel="prefetch" href="/assets/js/99.8edbd8d0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4de15886.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="Gahing's blog" class="logo"> <span class="site-name can-hide">Gahing's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/fe/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>前端基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/2e58d1/" class="nav-link">JavaScript</a></li><li class="dropdown-subitem"><a href="/pages/7d9673/" class="nav-link">HTML</a></li><li class="dropdown-subitem"><a href="/pages/c1c6f3/" class="nav-link">CSS</a></li><li class="dropdown-subitem"><a href="/pages/df8030/" class="nav-link">TypeScript</a></li><li class="dropdown-subitem"><a href="/pages/25ca35/" class="nav-link">WebAssembly</a></li></ul></li><li class="dropdown-item"><h4>UI 框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/b4d8a3/" class="nav-link">React</a></li><li class="dropdown-subitem"><a href="/pages/b5decb/" class="nav-link">Vue</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="服务端" class="dropdown-title"><a href="/server/" class="link-title">服务端</a> <span class="title" style="display:none;">服务端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>中间件</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/c29f00/" class="nav-link">Redis</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="通用技术" class="dropdown-title"><a href="/technology/" class="link-title">通用技术</a> <span class="title" style="display:none;">通用技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/703e88/" class="nav-link">Git</a></li><li class="dropdown-item"><!----> <a href="/pages/58bfaf/" class="nav-link">网络基础</a></li><li class="dropdown-item"><!----> <a href="/pages/eca777/" class="nav-link">算法与数据结构</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/c70629/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/pages/f00c67/" class="nav-link">人生总结</a></li><li class="dropdown-item"><!----> <a href="/pages/baaa02/" class="nav-link">实用技巧</a></li><li class="dropdown-item"><!----> <a href="/categories/?category=%E8%BD%AF%E7%B4%A0%E8%B4%A8.html" class="nav-link">软素质</a></li><li class="dropdown-item"><h4>实用技巧</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/d3622e/" class="nav-link">markdown 技巧</a></li></ul></li><li class="dropdown-item"><h4>知识科普</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/d3f796/" class="nav-link">地理坐标系</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><!----> <span class="title" style="display:;">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/f06636/" class="nav-link">网站</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/francecil/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="/img/avatar.jpeg"> <div class="blogger-info"><h3>Gahing</h3> <span>To be best</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/fe/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>前端基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/2e58d1/" class="nav-link">JavaScript</a></li><li class="dropdown-subitem"><a href="/pages/7d9673/" class="nav-link">HTML</a></li><li class="dropdown-subitem"><a href="/pages/c1c6f3/" class="nav-link">CSS</a></li><li class="dropdown-subitem"><a href="/pages/df8030/" class="nav-link">TypeScript</a></li><li class="dropdown-subitem"><a href="/pages/25ca35/" class="nav-link">WebAssembly</a></li></ul></li><li class="dropdown-item"><h4>UI 框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/b4d8a3/" class="nav-link">React</a></li><li class="dropdown-subitem"><a href="/pages/b5decb/" class="nav-link">Vue</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="服务端" class="dropdown-title"><a href="/server/" class="link-title">服务端</a> <span class="title" style="display:none;">服务端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>中间件</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/c29f00/" class="nav-link">Redis</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="通用技术" class="dropdown-title"><a href="/technology/" class="link-title">通用技术</a> <span class="title" style="display:none;">通用技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/703e88/" class="nav-link">Git</a></li><li class="dropdown-item"><!----> <a href="/pages/58bfaf/" class="nav-link">网络基础</a></li><li class="dropdown-item"><!----> <a href="/pages/eca777/" class="nav-link">算法与数据结构</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/c70629/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/pages/f00c67/" class="nav-link">人生总结</a></li><li class="dropdown-item"><!----> <a href="/pages/baaa02/" class="nav-link">实用技巧</a></li><li class="dropdown-item"><!----> <a href="/categories/?category=%E8%BD%AF%E7%B4%A0%E8%B4%A8.html" class="nav-link">软素质</a></li><li class="dropdown-item"><h4>实用技巧</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/d3622e/" class="nav-link">markdown 技巧</a></li></ul></li><li class="dropdown-item"><h4>知识科普</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/d3f796/" class="nav-link">地理坐标系</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><!----> <span class="title" style="display:;">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/f06636/" class="nav-link">网站</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/francecil/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>前端基础</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>前端调试</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>开发工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>执行引擎</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-2"><p class="sidebar-heading open"><span>V8</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/9d2a81/" aria-current="page" class="active sidebar-link">Devtools Console 面板输入了 1+1 ，浏览器内部发生了什么？</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level2"><a href="/pages/9d2a81/#何为副作用" class="sidebar-link">何为副作用</a></li><li class="sidebar-sub-header level2"><a href="/pages/9d2a81/#其他不会执行的情况" class="sidebar-link">其他不会执行的情况</a></li><li class="sidebar-sub-header level2"><a href="/pages/9d2a81/#protocol-monitor" class="sidebar-link">Protocol monitor</a></li><li class="sidebar-sub-header level2"><a href="/pages/9d2a81/#runtime-evaluate-协议" class="sidebar-link">Runtime.evaluate 协议</a></li><li class="sidebar-sub-header level2"><a href="/pages/9d2a81/#基于参数进行黑盒测试" class="sidebar-link">基于参数进行黑盒测试</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/9d2a81/#调试-cdp" class="sidebar-link">调试 CDP</a></li><li class="sidebar-sub-header level3"><a href="/pages/9d2a81/#timeout" class="sidebar-link">timeout</a></li><li class="sidebar-sub-header level3"><a href="/pages/9d2a81/#throwonsideeffect" class="sidebar-link">throwOnSideEffect</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/9d2a81/#初探小结" class="sidebar-link">初探小结</a></li><li class="sidebar-sub-header level2"><a href="/pages/9d2a81/#v8-基础概念" class="sidebar-link">V8 基础概念</a></li><li class="sidebar-sub-header level2"><a href="/pages/9d2a81/#源码分析" class="sidebar-link">源码分析</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/9d2a81/#分析超时中断" class="sidebar-link">分析超时中断</a></li><li class="sidebar-sub-header level3"><a href="/pages/9d2a81/#evaluateglobal-具体流程" class="sidebar-link">EvaluateGlobal 具体流程</a></li><li class="sidebar-sub-header level3"><a href="/pages/9d2a81/#ignition-解释器" class="sidebar-link">Ignition 解释器</a></li><li class="sidebar-sub-header level3"><a href="/pages/9d2a81/#副作用检测" class="sidebar-link">副作用检测</a></li><li class="sidebar-sub-header level3"><a href="/pages/9d2a81/#副作用处理" class="sidebar-link">副作用处理</a></li><li class="sidebar-sub-header level3"><a href="/pages/9d2a81/#startsideeffectcheckmode-做了什么" class="sidebar-link">StartSideEffectCheckMode 做了什么？</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/9d2a81/#整体流程" class="sidebar-link">整体流程</a></li></ul></li><li><a href="/pages/223f25/" class="sidebar-link">V8源码解析之Array.prototype.sort</a></li><li><a href="/pages/26ca79/" class="sidebar-link">macOS 上使用 lldb 和 gdb</a></li><li><a href="/pages/fdca7f/" class="sidebar-link">从「消失的 1 千粉丝」谈及 toFixed 的坑</a></li></ul></section></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>浏览器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>编程语言</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>应用框架</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工程能力</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>应用基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>专业领域</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>业务场景</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>其他杂项</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06970110><div class="articleInfo" data-v-06970110><ul class="breadcrumbs" data-v-06970110><li data-v-06970110><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-06970110></a></li> <li data-v-06970110><a href="/fe/#大前端" data-v-06970110>大前端</a></li><li data-v-06970110><a href="/fe/#前端基础" data-v-06970110>前端基础</a></li><li data-v-06970110><a href="/fe/#执行引擎" data-v-06970110>执行引擎</a></li><li data-v-06970110><a href="/fe/#V8" data-v-06970110>V8</a></li></ul> <div class="info" data-v-06970110><div title="作者" class="author iconfont icon-touxiang" data-v-06970110><a href="https://github.com/francecil" target="_blank" title="作者" class="beLink" data-v-06970110>gahing</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-06970110><a href="javascript:;" data-v-06970110>2022-09-19</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">Devtools Console 面板输入了 1+1 ，浏览器内部发生了什么？<!----></h1>  <div class="theme-vdoing-content content__default"><h1 id="背景"><a href="#背景" class="header-anchor">#</a> 背景</h1> <p>新来的实习生妹子问了一个问题：「你看 Chrome 的 Devtools 调试工具，代码写一半还没运行下面就会提示输出结果，这个咋做到的？」</p> <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5451e0a8a07e459baa85330e57224caf~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p> <p>咋做的？对于 Devtools 的内部执行逻辑，咱不了解，但咱也不能直说，<strong>先上一套方法论（5W1H）：</strong></p> <hr> <p>「</p> <p>对于这个问题，我没了解过，但我会从以下几个方面进行思考：</p> <ol><li>这个输出提示功能是什么（What）？
+<ol><li>我会关注是否所有代码都会提示？比如异常代码、产生副作用的代码、执行死循环的代码等等，内部该如何处理</li> <li>我会关注这个功能是否会带来较大的性能损坏，稳定性如何，以及是否可以手动关闭。</li></ol></li> <li>这个功能是在哪执行的（Where）？
+<ol><li>我们的操作是在 Devtools 上，但是显然 js 代码的解析和执行需要运行在 v8 上，因此必定由一个代码传到 v8 的过程。然后 v8 产生结果再返回给 Devtools</li></ol></li> <li>什么时机会触发此功能（When）？
+<ol><li>可以和「搜索框输入文案获取列表数据」这个例子进行类比，一般来说我们会做防抖，避免无效请求频繁触发浪费资源。在此处也一样，如果每次输入都会进行提示那么则会损坏性能。</li> <li>但防抖也会带来一个延迟结果的缺点，这块得看 devtools 怎么进行衡量。</li> <li>以我对 Chrome 的了解和日常该功能的使用，我认为是实时触发的。</li></ol></li> <li>这个功能是提供给谁的（Who）？显然是开发者</li> <li>为什么有这个功能（Why）？显然，为了方便调试。我们可以快速的查看当前输入对象的属性，以及查看纯函数的输出结果等等</li> <li>这个功能是怎么做的（How）？我主要会关注三点：
+<ol><li>数据是怎么传输的：据我所知，Devtools 的操作是通过 <a href="https://chromedevtools.github.io/devtools-protocol/tot/Runtime/#method-evaluate" target="_blank" rel="noopener noreferrer">CDP 协议<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 传递给底层服务，底层服务运行完毕再返回 Devtools ，然后 Devtools 去做结果的渲染。</li> <li>怎么避免死循环：如果死循环代码跑在同一个事件渲染，必然导致页面挂掉。而单线程又无法控制某段代码的执行时长，那么我猜测只能另起一个线程，然后做了作用域和上下文的共享了。</li> <li>怎么检测副作用：这个不了解，不清楚 V8 的编译器能不能直接分析出来。</li></ol></li></ol> <p>」</p> <hr> <p>「你说的都是套话，所以内部具体是咋执行的？？」，妹子轻语。</p> <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e9cf3f233f3e48d89bd336201af8f44c~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p> <p>看来妹子不吃这套，不服气的我赶紧 Google 了起来，找到了这篇文章，并分享给了妹子。</p> <p><strong>先上结论：</strong></p> <ol><li>每次输入或者回车运行代码，都会发送一个名为 <code>Runtime.evaluate</code> 的 CDP 请求，可能会带上 timeout、throwOnSideEffect、expression 等参数。expression 表示控制台当前输入的代码段；timeout 则在预览结果阶段发送，其值为 500ms；throwOnSideEffect 则表示需要考虑副作用影响，也是在预览结果阶段发送。</li> <li>V8 收到此 CDP 请求后，根据不同参数进行相应处理。</li> <li>若传递了 timeout ，则表明需要在指定时间内返回执行结果。这个功能是通过另外启动一个工作线程并共享运行时环境和上下文实现的。</li> <li>若传递了 throwOnSideEffect ，则表明需要检查代码中是否存在副作用。检查时机在解释器生成字节码之后以及运行时。采用黑白名单的机制可以快速分析出哪些字节码存在副作用，但是部分操作仍不能检测出来，于是需要在运行时检查。此时需要创建一个内存追踪器，追踪本次执行创建的变量内容，字节码运行时若使用的变量无法被此追踪器找到，说明变量是之前创建的，可能存在副作用。</li></ol> <p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c68d8d677e4d4230aa72da9b899725b0~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p> <blockquote><p>PS：故事纯属虚构，如有雷同，纯属巧合</p></blockquote> <p>接下来，我们开始分析~</p> <h1 id="第一层-功能溯源"><a href="#第一层-功能溯源" class="header-anchor">#</a> 第一层：功能溯源</h1> <p>记得这个功能是某个版本的 Chrome 才加入的，那么我们先去找当时的功能说明</p> <p>google 上键入 <code>chrome devtools console evaluate preview</code></p> <p>搜索的第一篇博客就是介绍此功能（<strong>Eager Evaluation，预执行</strong>）的</p> <p><a href="https://developer.chrome.com/blog/new-in-devtools-68/#eagerevaluation" target="_blank" rel="noopener noreferrer">https://developer.chrome.com/blog/new-in-devtools-68/#eagerevaluation<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>Live demo: https://youtu.be/mfuE53x4b3k?t=1564</p> <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fdc44e1fd2ed453a83ab410aa40a811d~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p> <p>在 console 面板上键入代码时，底下会进行结果的预览提示，也可以选择关闭此功能</p> <p>文章最后还提到了一个副作用的概念，如果输入的代码会产生副作用，就不会预执行。</p> <h2 id="何为副作用"><a href="#何为副作用" class="header-anchor">#</a> 何为副作用</h2> <p>可以看这个<a href="https://stackoverflow.com/questions/8129105/javascript-closures-and-side-effects-in-plain-english-separately" target="_blank" rel="noopener noreferrer">解释<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>“纯函数” 是将其输入值映射到输出值的函数，例如 <code>plus(x, y) { return x + y; }</code>。 “副作用”是返回值以外的任何影响。</p> <p>比如下面代码具有引发警报对话框（并需要用户交互）的副作用</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">plusWithSideEffects</span><span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span> y</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'This is a side effect'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+  <span class="token keyword">return</span> x <span class="token operator">+</span> y<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>因此如果当输入的代码会产生副作用，应该避免预执行。</p> <h2 id="其他不会执行的情况"><a href="#其他不会执行的情况" class="header-anchor">#</a> 其他不会执行的情况</h2> <p>使用人工测试，我们还发现了以下这些情况也不会生成预览结果</p> <ul><li>语法解析错误</li> <li>运行时错误</li> <li>执行超时</li></ul> <h1 id="第二层-原理初探"><a href="#第二层-原理初探" class="header-anchor">#</a> 第二层：原理初探</h1> <p>我们知道，devtools 上的绝大部分操作，都是通过 cdp 协议来控制的。</p> <p>因此我们可以打开 <code>Protocol monitor</code> 来看下 devtools 都发了什么数据。</p> <h2 id="protocol-monitor"><a href="#protocol-monitor" class="header-anchor">#</a> Protocol monitor</h2> <p>为避免有些同学不知道 <code>Protocol monitor</code> ，本节做下简单介绍，了解的可以跳过。</p> <p><code>Protocol monitor</code> 是一个 cdp 协议监控器，会记录当前用户在这个 devtool 面板上产生的所有 CDP 的请求和响应。</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/83fa1316f73a404caaf153905262c535~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p> <p>如果没找到这个选项，需要先到 Devtools setting 里开启</p> <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7e69c420e5d64ca49741b07d8e86a3d5~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p> <p>之后 reload devtools 就可以看到了</p> <h2 id="runtime-evaluate-协议"><a href="#runtime-evaluate-协议" class="header-anchor">#</a> <code>Runtime.evaluate</code> 协议</h2> <blockquote><p>PS: 找一个无痕环境的空白页，方便观察结果（避免受到 Chrome 拓展的影响）</p></blockquote> <p>在 console 面板键入 <code>1+1</code> ，会发现发了三次 <code>Runtime.evaluate</code> CDP</p> <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a79fc509ab7f4b27bfd78ea55414a626~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 第一次
+// request
+{
+    &quot;expression&quot;: &quot;1&quot;,
+    &quot;includeCommandLineAPI&quot;: true,
+    &quot;generatePreview&quot;: true,
+    &quot;userGesture&quot;: false,
+    &quot;awaitPromise&quot;: false,
+    &quot;throwOnSideEffect&quot;: true,
+    &quot;timeout&quot;: 500,
+    &quot;disableBreaks&quot;: true,
+    &quot;replMode&quot;: true,
+    &quot;uniqueContextId&quot;: &quot;1952859779443296532.-6400643113353669212&quot;
+}
+// response
+{
+    &quot;result&quot;: {
+        &quot;type&quot;: &quot;number&quot;,
+        &quot;value&quot;: 1,
+        &quot;description&quot;: &quot;1&quot;
+    }
+}
+
+
+// 第二次
+// request
+{
+    &quot;expression&quot;: &quot;1+&quot;,
+    &quot;includeCommandLineAPI&quot;: true,
+    &quot;generatePreview&quot;: true,
+    &quot;userGesture&quot;: false,
+    &quot;awaitPromise&quot;: false,
+    &quot;throwOnSideEffect&quot;: true,
+    &quot;timeout&quot;: 500,
+    &quot;disableBreaks&quot;: true,
+    &quot;replMode&quot;: true,
+    &quot;uniqueContextId&quot;: &quot;1952859779443296532.-6400643113353669212&quot;
+}
+// response
+{
+    &quot;result&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;subtype&quot;: &quot;error&quot;,
+        &quot;className&quot;: &quot;SyntaxError&quot;,
+        &quot;description&quot;: &quot;SyntaxError: Unexpected end of input&quot;,
+        &quot;objectId&quot;: &quot;952682363357450140.1.1972&quot;
+    },
+    &quot;exceptionDetails&quot;: {
+        &quot;exceptionId&quot;: 50,
+        &quot;text&quot;: &quot;Uncaught&quot;,
+        &quot;lineNumber&quot;: 0,
+        &quot;columnNumber&quot;: 2,
+        &quot;scriptId&quot;: &quot;136&quot;,
+        &quot;exception&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;subtype&quot;: &quot;error&quot;,
+            &quot;className&quot;: &quot;SyntaxError&quot;,
+            &quot;description&quot;: &quot;SyntaxError: Unexpected end of input&quot;,
+            &quot;objectId&quot;: &quot;952682363357450140.1.1973&quot;
+        }
+    }
+}
+
+// 第三次
+// request
+{
+    &quot;expression&quot;: &quot;1+1&quot;,
+    &quot;includeCommandLineAPI&quot;: true,
+    &quot;generatePreview&quot;: true,
+    &quot;userGesture&quot;: false,
+    &quot;awaitPromise&quot;: false,
+    &quot;throwOnSideEffect&quot;: true,
+    &quot;timeout&quot;: 500,
+    &quot;disableBreaks&quot;: true,
+    &quot;replMode&quot;: true,
+    &quot;uniqueContextId&quot;: &quot;1952859779443296532.-6400643113353669212&quot;
+}
+// response
+{
+    &quot;type&quot;: &quot;number&quot;,
+    &quot;value&quot;: 2,
+    &quot;description&quot;: &quot;2&quot;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br></div></div><p>按回车时也会发送一次</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>{
+    &quot;expression&quot;: &quot;1+1&quot;,
+    &quot;objectGroup&quot;: &quot;console&quot;,
+    &quot;includeCommandLineAPI&quot;: true,
+    &quot;silent&quot;: false,
+    &quot;returnByValue&quot;: false,
+    &quot;generatePreview&quot;: true,
+    &quot;userGesture&quot;: true,
+    &quot;awaitPromise&quot;: false,
+    &quot;replMode&quot;: true,
+    &quot;allowUnsafeEvalBlockedByCSP&quot;: false,
+    &quot;uniqueContextId&quot;: &quot;1952859779443296532.-6400643113353669212&quot;
+}
+{
+    &quot;type&quot;: &quot;number&quot;,
+    &quot;value&quot;: 2,
+    &quot;description&quot;: &quot;2&quot;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>对比下差异，主要是 timeout 和 throwOnSideEffect 参数不同。</p> <p>预执行的情况下 timeout 为 500 ，throwOnSideEffect 为 true</p> <p>找到对应的<a href="https://chromedevtools.github.io/devtools-protocol/tot/Runtime/#method-evaluate" target="_blank" rel="noopener noreferrer">协议定义<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <ul><li>throwOnSideEffect: Whether to throw an exception if side effect cannot be ruled out during evaluation. This implies <code>disableBreaks</code> below.</li> <li>timeout: Terminate execution after timing out (number of milliseconds).</li></ul> <h2 id="基于参数进行黑盒测试"><a href="#基于参数进行黑盒测试" class="header-anchor">#</a> 基于参数进行黑盒测试</h2> <p>使用不同的参数调试方法，并猜测实现原理</p> <h3 id="调试-cdp"><a href="#调试-cdp" class="header-anchor">#</a> 调试 CDP</h3> <blockquote><p>了解的同学可以跳过本小节</p></blockquote> <p>如果是 node 端，可以使用 <code>puppeteer</code> 、 <code>chrome-remote-interface</code> 等工具。</p> <p>在浏览器上，可以使用 devtools 页面对外暴露的对象执行 CDP 操作。</p> <p>如何使用 devtools 页面的对象？我们可以打开该 devtools 页面（A）的 devtools 页面(B)。</p> <ul><li>打开 devtools 页面可以使用快捷键 Ctrl+Shift+I（Windows）或 Cmd+Opt+I（Mac）</li> <li>devtools 使用独立窗口模式</li></ul> <p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2b2c764f759740a093c3e59d389fe81d~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p> <ul><li>在调试窗口 A 上，使用快捷键打开调试窗口 B</li></ul> <p>至此，在调试窗口 B 上就可以调试 A 的代码，使用 devtools 导出的一些模块来进行 cdp 交互</p> <p>接下来可以在 console 面板运行如下代码：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> Main <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./devtools-frontend/front_end/entrypoints/main/main.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">await</span> Main<span class="token punctuation">.</span>MainImpl<span class="token punctuation">.</span><span class="token function">sendOverProtocol</span><span class="token punctuation">(</span><span class="token string">'Runtime.evaluate'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token literal-property property">expression</span><span class="token operator">:</span> <span class="token string">'alert(111)'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>可以发现在原始页面出现了一个 alert 弹窗</p> <blockquote><p>devtools 的目录结构随时可能调整，但是 MainImpl 这个对象不太会调整。</p> <p>因此如果用上面的方式没有找到 Main 这个对象，大概率是目录调整过了。</p> <p>可以先用 search 工具搜一下 MainImpl 导出的文件位置，然后在 source 面板看整个 devtools-frontend 项目的目录结构</p></blockquote> <h3 id="timeout"><a href="#timeout" class="header-anchor">#</a> timeout</h3> <p>执行死循环代码并配置不同的 timeout</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>await Main.MainImpl.sendOverProtocol('Runtime.evaluate', {
+    &quot;expression&quot;: &quot; while(true){}&quot;,
+    &quot;timeout&quot;: 500,
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>结果：在 500ms 后返回异常 <code>Uncaught {code: -32000, message: 'Execution was terminated'}</code></p> <hr> <div class="language- line-numbers-mode"><pre class="language-text"><code>await Main.MainImpl.sendOverProtocol('Runtime.evaluate', {
+    &quot;expression&quot;: &quot; while(true){}&quot;,
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>结果：页面卡住</p> <p><strong>初步断定，如果配置了 timeout 参数，会使用不同的线程执行代码</strong></p> <h3 id="throwonsideeffect"><a href="#throwonsideeffect" class="header-anchor">#</a> throwOnSideEffect</h3> <p>判定副作用是在编译阶段发现还是在运行阶段发现。</p> <p>可以通过一个死循环卡住执行来测试</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>await Main.MainImpl.sendOverProtocol('Runtime.evaluate', {
+    &quot;expression&quot;: &quot;while(true){}; var a = 1;&quot;,
+    &quot;timeout&quot;: 1000,
+    &quot;throwOnSideEffect&quot;: true,
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>提示 <code>EvalError: Possible side-effect in debug-evaluate</code></p> <hr> <div class="language- line-numbers-mode"><pre class="language-text"><code>await Main.MainImpl.sendOverProtocol('Runtime.evaluate', {
+    &quot;expression&quot;: &quot;while(true){}; window.a = 1;&quot;,
+    &quot;timeout&quot;: 1000,
+    &quot;throwOnSideEffect&quot;: true,
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>抛出异常：<code>Uncaught {code: -32000, message: 'Execution was terminated'}</code></p> <hr> <div class="language- line-numbers-mode"><pre class="language-text"><code>await Main.MainImpl.sendOverProtocol('Runtime.evaluate', {
+    &quot;expression&quot;: &quot;while(true){}; var a = 1;&quot;,
+    &quot;timeout&quot;: 1000,
+    &quot;throwOnSideEffect&quot;: false,
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>抛出异常：<code>Uncaught {code: -32000, message: 'Execution was terminated'}</code></p> <hr> <p>初步分析，定义全局变量会导致副作用，这个可以在编译时发现；而对 window 对象赋值，不一定会导出副作用，需要实际执行才知道。</p> <p>因此这个副作用检测可能有多种手段</p> <h2 id="初探小结"><a href="#初探小结" class="header-anchor">#</a> 初探小结</h2> <ul><li>预执行阶段会传递 timeout 参数，不会导致死循环，猜测是采用另开线程实现</li> <li>预执行阶段会检查副作用，这个检测可能是编译时检测，也可能是运行时检测</li></ul> <h1 id="第三层-源码解析"><a href="#第三层-源码解析" class="header-anchor">#</a> 第三层：源码解析</h1> <p>本节将深入分析 V8 源码，对初探小结的猜测进行验证</p> <h2 id="v8-基础概念"><a href="#v8-基础概念" class="header-anchor">#</a> V8 基础概念</h2> <ul><li><strong>Isolate</strong>: 一个独立的 v8 运行时环境（runtime），包括堆栈、堆管理器（heap）、垃圾回收器（gc）等。同一时刻，只有一个线程能使用 isolate ，多个线程可以通过线程切换来共享同一个 isolate 。</li> <li><strong>Context</strong>: 上下文对象。单独的 <code>Isolate</code> 不足以运行脚本，需要 <code>Context</code> 来提供全局变量。Context 在其所处的 <code>Isolate</code> 管理的 <code>Heap</code> 中建立一个对象，并以此为全局变量构建出一个完整的执行环境供 js 脚本使用。</li> <li><strong>Handle</strong>: 对一个特定 JS 对象的索引。它指向此 JS对象 在 V8 所管理的 Heap 中的位置。需要注意的是，Handle 不存于 Heap 中，而是存在于 stack 中。只有一个 Handle 被释放后，此 Handle 才会从 stack 中推出。这就带来一个问题，在执行特定操作时，我们可能需要声明很多 Handle。如果要一个个手动释放，未免太麻烦。为此，我们使用 <code>Handle Scope</code> 来集中释放这些 Handle 。</li> <li><strong>Handle Scope</strong>: 一个包含很多 handle 的集合，用于对 handle 进行统一管理。当这个工作区 Handle Scope 被移出堆栈时，其所包含的所有 Handle 都会被移出堆栈，并且被垃圾管理器标注，从而在后续的垃圾回收过程快速的定位到这些可能需要被销毁的 Handle 。</li> <li><strong>Context Scope</strong>: 用来管理 <code>Context</code> 的句柄容器</li> <li><strong>Session</strong>: 一次 cdp 会话</li> <li><strong>SharedFunction</strong>: 编译 Javascript 源码得到的字节码流，不能直接执行</li> <li><strong>JSFunction</strong>: 将 SharedFunction 绑定上执行入口和 Context ，此时该字节码流才能被解释器（Ignition）执行</li> <li><strong>Builtin（Built-in function）</strong>：编译好的内置代码块（chunk），存储在 <code>snapshot_blob.bin</code> 文件中，V8 启动时以反序列化方式加载，运行时可以直接调用。其功能包括 Ignition 实现、字节码实现、以及 ECMA 规范实现等，可以从 <code>BUILTIN_LIST</code> 定义中查阅。从实现角度上分为七种类型，比如 BUILD_CPP、BUILD_ASM 等子类型。</li></ul> <hr> <p>V8 编译一段 JS 代码（字符串）的流程如下：</p> <p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4f24b5a81e144c67970058c2eeaa9a05~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p> <ol><li>将源码进行解析（词法分析、语法分析）得到抽象语法树（AST）。AST 是 JavaScript 代码的句法结构的树形表示形式</li> <li>使用 Ignition 解释器将 AST 解释为字节码（共100+种），并负责执行，输入是一个字节码序列，输出是执行结果。</li> <li>Ignition 是带有累加器的寄存器，每个字节码指定其输入和输出做成寄存器操作数。</li> <li>对于热点代码还会进行优化，使用 TurboFan 编译器将字节码编译为机器码</li> <li>在某些情况下（比如调试源码），可以选择退优化，将机器码再度变成字节码，方便分析和调试。</li></ol> <p>更具体的可以参考这篇<a href="https://zhuanlan.zhihu.com/p/28590489" target="_blank" rel="noopener noreferrer">文章<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <h2 id="源码分析"><a href="#源码分析" class="header-anchor">#</a> 源码分析</h2> <p>根据搜索关键字 throwOnSideEffect ，我们找到了 <code>V8RuntimeAgentImpl::evaluate</code> 方法，此方法为调用的主要入口。</p> <div class="language-c++ line-numbers-mode"><pre class="language-text"><code>void V8RuntimeAgentImpl::evaluate(
+  // 参数定义，差不多同 CDP 协议定义，重点关注 throwOnSideEffect 和 timeout
+  const String16&amp; expression, Maybe&lt;String16&gt; objectGroup,
+  Maybe&lt;bool&gt; includeCommandLineAPI, Maybe&lt;bool&gt; silent,
+  Maybe&lt;int&gt; executionContextId, Maybe&lt;bool&gt; returnByValue,
+  Maybe&lt;bool&gt; generatePreview, Maybe&lt;bool&gt; userGesture,
+  Maybe&lt;bool&gt; maybeAwaitPromise, Maybe&lt;bool&gt; throwOnSideEffect,
+  Maybe&lt;double&gt; timeout, Maybe&lt;bool&gt; disableBreaks, Maybe&lt;bool&gt; maybeReplMode,
+  Maybe&lt;bool&gt; allowUnsafeEvalBlockedByCSP, Maybe&lt;String16&gt; uniqueContextId,
+  Maybe&lt;bool&gt; generateWebDriverValue,
+  std::unique_ptr&lt;EvaluateCallback&gt; callback) {
+TRACE_EVENT0(TRACE_DISABLED_BY_DEFAULT(&quot;devtools.timeline&quot;),
+             &quot;EvaluateScript&quot;);
+int contextId = 0;
+
+// ... 上下文检查
+
+// 基于当前会话 session 和 context 创建一个作用域
+InjectedScript::ContextScope scope(m_session, contextId);
+response = scope.initialize();
+
+
+...
+
+// 注入 devtools 命令行 api 到该作用域，比如 $,$0 ,copy 等
+if (includeCommandLineAPI) scope.installCommandLineAPI();
+
+...
+
+v8::MaybeLocal&lt;v8::Value&gt; maybeResultValue;
+{
+  // 在配置执行超时时间时，会额外再创建一个执行作用域
+  V8InspectorImpl::EvaluateScope evaluateScope(scope);
+  if (timeout.isJust()) {
+    // 设置指定时间内返回结果。稍后分析
+    response = evaluateScope.setTimeout(timeout.fromJust() / 1000.0);
+    if (!response.IsSuccess()) {
+      callback-&gt;sendFailure(response);
+      return;
+    }
+  }
+  
+  // 姑且简单理解为，启动一个微任务来执行 js 脚本
+  v8::MicrotasksScope microtasksScope(m_inspector-&gt;isolate(),
+                                      v8::MicrotasksScope::kRunMicrotasks);
+  
+  // 执行模式，比如是否检测副作用，是否有断点等等
+  v8::debug::EvaluateGlobalMode mode =
+      v8::debug::EvaluateGlobalMode::kDefault;
+  if (throwOnSideEffect.fromMaybe(false)) {
+    mode = v8::debug::EvaluateGlobalMode::kDisableBreaksAndThrowOnSideEffect;
+  } else if (disableBreaks.fromMaybe(false)) {
+    mode = v8::debug::EvaluateGlobalMode::kDisableBreaks;
+  }
+  // 将普通字符串转换为 v8 string 对象
+  const v8::Local&lt;v8::String&gt; source =
+      toV8String(m_inspector-&gt;isolate(), expression);
+  // 往下继续运行，会走解析-&gt;编译-&gt;运行流程，并返回结果。稍后分析
+  maybeResultValue = v8::debug::EvaluateGlobal(m_inspector-&gt;isolate(), source,
+                                               mode, replMode);
+}  // Run microtasks before returning result.
+
+// 重置作用域
+response = scope.initialize();
+
+// ... 将返回结果或异常值进行包装并返回
+  
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br></div></div><p>本段代码描述了整个执行流程，如何控制超时以及如何解析代码需要进一步分析</p> <h3 id="分析超时中断"><a href="#分析超时中断" class="header-anchor">#</a> 分析超时中断</h3> <p>进入 <a href="https://source.chromium.org/chromium/chromium/src/+/main:v8/src/inspector/v8-inspector-impl.cc;drc=87f8e0a4658d1835302a09ec19b2594b835ddb31;bpv=0;bpt=1;l=464" target="_blank" rel="noopener noreferrer">setTimeout<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，可以观察到实际是另外开启了一个工作线程。</p> <div class="language-c++ line-numbers-mode"><pre class="language-text"><code>protocol::Response V8InspectorImpl::EvaluateScope::setTimeout(double timeout) {
+  if (m_isolate-&gt;IsExecutionTerminating()) {
+    return protocol::Response::ServerError(&quot;Execution was terminated&quot;);
+  }
+  m_cancelToken.reset(new CancelToken());
+  // 在对应平台（比如 d8）上的工作线程中创建一个可中止的执行任务
+  v8::debug::GetCurrentPlatform()-&gt;CallDelayedOnWorkerThread(
+      // 创建一个执行任务
+      std::make_unique&lt;TerminateTask&gt;(m_isolate, m_cancelToken), timeout);
+  return protocol::Response::Success();
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>创建工作线程是和具体的运行时相关的，比如 Chrome 上是 d8，同时还传递了 isolate 对象，保证运行时环境一致。</p> <p>超过指定时间之后，若还没有返回结果，那么就会返回「执行中断」的错误。</p> <h3 id="evaluateglobal-具体流程"><a href="#evaluateglobal-具体流程" class="header-anchor">#</a> EvaluateGlobal 具体流程</h3> <p>上面说到，EvaluateGlobal 方法做了「编译到运行」的整个过程</p> <p>内部实际调用 <a href="https://source.chromium.org/chromium/chromium/src/+/main:v8/src/debug/debug-evaluate.cc;drc=87f8e0a4658d1835302a09ec19b2594b835ddb31;bpv=1;bpt=1;l=43" target="_blank" rel="noopener noreferrer">DebugEvaluate::Global<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 得到的运行结果</p> <ol><li>进入 <code>DebugEvaluate::Global</code> 进一步分析</li></ol> <div class="language-c++ line-numbers-mode"><pre class="language-text"><code>MaybeHandle&lt;Object&gt; DebugEvaluate::Global(Isolate* isolate,
+  Handle&lt;String&gt; source,
+  debug::EvaluateGlobalMode mode,
+  REPLMode repl_mode) {
+// 生成 SharedFunction：直接编译 Javascript 源码得到的字节码流 shared_info
+Handle&lt;SharedFunctionInfo&gt; shared_info;
+if (!GetFunctionInfo(isolate, source, repl_mode).ToHandle(&amp;shared_info)) {
+return MaybeHandle&lt;Object&gt;();
+}
+
+Handle&lt;NativeContext&gt; context = isolate-&gt;native_context();
+
+// 生成 JSFunction：将 shared_info 绑定上 isolate 和 context 得到 JSFunction
+Handle&lt;JSFunction&gt; fun =
+Factory::JSFunctionBuilder{isolate, shared_info, context}.Build();
+// 往下调用
+return Global(isolate, fun, mode, repl_mode);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>该步骤主要做了字节码生成的工作并绑定了执行环境。后面再单独分析编译流程，先往下</p> <ol start="2"><li>进入 <code>Global(isolate, fun, mode, repl_mode)</code></li></ol> <div class="language-c++ line-numbers-mode"><pre class="language-text"><code>MaybeHandle&lt;Object&gt; DebugEvaluate::Global(Isolate* isolate,
+  Handle&lt;JSFunction&gt; function,
+  debug::EvaluateGlobalMode mode,
+  REPLMode repl_mode) {
+
+...
+
+// 如果是副作用异常模式，执行 StartSideEffectCheckMode
+if (mode == debug::EvaluateGlobalMode::kDisableBreaksAndThrowOnSideEffect) {
+isolate-&gt;debug()-&gt;StartSideEffectCheckMode();
+}
+// TODO(cbruni, 1244145): Use host-defined options from script context.
+Handle&lt;FixedArray&gt; host_defined_options(
+Script::cast(function-&gt;shared().script()).host_defined_options(),
+isolate);
+
+// 执行脚本
+MaybeHandle&lt;Object&gt; result = Execution::CallScript(
+isolate, function, Handle&lt;JSObject&gt;(context-&gt;global_proxy(), isolate),
+host_defined_options);
+
+// 关闭
+if (mode == debug::EvaluateGlobalMode::kDisableBreaksAndThrowOnSideEffect) {
+isolate-&gt;debug()-&gt;StopSideEffectCheckMode();
+}
+return result;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><p>该步骤针对副作用异常模式做了处理，在脚本执行前后做了特殊处理（后面分析，先往下）</p> <ol start="3"><li>进入执行脚本流程 <code>Execution::CallScript</code></li></ol> <div class="language-c++ line-numbers-mode"><pre class="language-text"><code>MaybeHandle&lt;Object&gt; Execution::CallScript(Isolate* isolate,
+                                          Handle&lt;JSFunction&gt; script_function,
+                                          Handle&lt;Object&gt; receiver,
+                                          Handle&lt;Object&gt; host_defined_options) {
+  DCHECK(script_function-&gt;shared().is_script());
+  DCHECK(receiver-&gt;IsJSGlobalProxy() || receiver-&gt;IsJSGlobalObject());
+  return Invoke(
+      isolate, InvokeParams::SetUpForCall(isolate, script_function, receiver, 1,
+                                          &amp;host_defined_options));
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>使用 SetUpForCall 设置调用参数，然后执行 Invoke 方法</p> <p>Invoke 内部做了字节码运行前的准备，然后开始执行字节码，更具体的可以看这篇文章 - <a href="https://zhuanlan.zhihu.com/p/428414777" target="_blank" rel="noopener noreferrer">连载《Chrome V8 原理讲解》第十篇 V8 Execution源码分析<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>接下来我们来分析 Ignition 解释器如何执行字节码</p> <h3 id="ignition-解释器"><a href="#ignition-解释器" class="header-anchor">#</a> Ignition 解释器</h3> <p>步骤步骤步骤
+Ignition 解释器执行字节码的步骤如下：</p> <ol><li>预处理：包括构建堆栈，参数入压等等，具体工作由 <code>InterpreterEntryTrampoline</code> 负责</li> <li>进入第一条字节码，执行完毕之后调用 <code>Dispatch()</code>，这个函数负责获取下一条字节码。</li> <li>执行字节码时，会使用该字节码对应的处理器（bytecode handler），该处理器是一种 Builtin（编译好的内置代码块）</li> <li>不断重复这个过程，直到字节码序列遍历完毕</li></ol> <p>以 <code>JSFunction 调用</code> 的内置代码块为例 <code>Generate_CallFunction</code></p> <p>内部执行过程如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 不断向下执行，直到 RUNTIME_FUNCTION(Runtime_DebugOnFunctionCall)
+
+void Builtins::Generate_CallFunction(MacroAssembler* masm,
+                                     ConvertReceiverMode mode) {
+  ...
+  __ InvokeFunctionCode(rdi, no_reg, rbx, rax, InvokeType::kJump);
+}
+
+//=====
+
+void MacroAssembler::InvokeFunctionCode(Register function, Register new_target,
+                                        Register expected_parameter_count,
+                                        Register actual_parameter_count,
+                                        InvokeType type) {
+  // ...
+
+  // Deferred debug hook.
+  bind(&amp;debug_hook);
+  CallDebugOnFunctionCall(function, new_target, expected_parameter_count,
+                          actual_parameter_count);
+  b(&amp;continue_after_hook);
+
+  // Continue here if InvokePrologue does handle the invocation due to
+  // mismatched parameter counts.
+  bind(&amp;done);
+}
+
+// ======
+
+void MacroAssembler::CallDebugOnFunctionCall(Register fun, Register new_target,
+                                             Register expected_parameter_count,
+                                             Register actual_parameter_count) {
+  // ...
+  
+  CallRuntime(Runtime::kDebugOnFunctionCall);
+  
+  // ...
+}
+
+// ==== RUNTIME_FUNCTION 是一些全局的宏模板，由 FOR_EACH_INTRINSIC_DEBUG 定义（runtime-debug.h）
+
+// 在 JSFunction 调用时，根据情况，准备介入或执行副作用检查
+RUNTIME_FUNCTION(Runtime_DebugOnFunctionCall) {
+  HandleScope scope(isolate);
+  DCHECK_EQ(2, args.length());
+  Handle&lt;JSFunction&gt; fun = args.at&lt;JSFunction&gt;(0);
+  Handle&lt;Object&gt; receiver = args.at(1);
+  
+  // 函数调用时需要需要执行检查
+  if (isolate-&gt;debug()-&gt;needs_check_on_function_call()) {
+    // Ensure that the callee will perform debug check on function call too.
+    Handle&lt;SharedFunctionInfo&gt; shared(fun-&gt;shared(), isolate);
+    isolate-&gt;debug()-&gt;DeoptimizeFunction(shared);
+    // ...
+    
+    // 检查副作用
+    if (isolate-&gt;debug_execution_mode() == DebugInfo::kSideEffects &amp;&amp;
+        !isolate-&gt;debug()-&gt;PerformSideEffectCheck(fun, receiver)) {
+      return ReadOnlyRoots(isolate).exception();
+    }
+  }
+  return ReadOnlyRoots(isolate).undefined_value();
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br></div></div><p>如果为 SideEffects 模式，则进行副作用检查。</p> <div class="language-c++ line-numbers-mode"><pre class="language-text"><code>bool Debug::PerformSideEffectCheck(Handle&lt;JSFunction&gt; function,
+                                   Handle&lt;Object&gt; receiver) {
+  // ...
+  
+  // 获取副作用状态，并根据不同状态进行不同处理
+  DebugInfo::SideEffectState side_effect_state =
+      debug_info-&gt;GetSideEffectState(isolate_);
+  switch (side_effect_state) {
+    case DebugInfo::kHasSideEffects:
+      if (FLAG_trace_side_effect_free_debug_evaluate) {
+        PrintF(&quot;[debug-evaluate] Function %s failed side effect check.\n&quot;,
+               function-&gt;shared().DebugNameCStr().get());
+      }
+      side_effect_check_failed_ = true;
+      // Throw an uncatchable termination exception.
+      isolate_-&gt;TerminateExecution();
+      return false;
+    case DebugInfo::kRequiresRuntimeChecks: {
+      if (!shared-&gt;HasBytecodeArray()) {
+        return PerformSideEffectCheckForObject(receiver);
+      }
+      // If function has bytecode array then prepare function for debug
+      // execution to perform runtime side effect checks.
+      DCHECK(shared-&gt;is_compiled());
+      PrepareFunctionForDebugExecution(shared);
+      ApplySideEffectChecks(debug_info);
+      return true;
+    }
+    case DebugInfo::kHasNoSideEffect:
+      return true;
+    case DebugInfo::kNotComputed:
+    default:
+      UNREACHABLE();
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div><h3 id="副作用检测"><a href="#副作用检测" class="header-anchor">#</a> 副作用检测</h3> <p>副作用被定义在 <code>v8/src/objects/debug-objects.h</code> ，一共有 4 种类型：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> enum SideEffectState {
+    kNotComputed = 0,
+    kHasSideEffects = 1,
+    kRequiresRuntimeChecks = 2,
+    kHasNoSideEffect = 3,
+  };
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>那么如何判定副作用状态？</p> <div class="language-c++ line-numbers-mode"><pre class="language-text"><code>DebugInfo::SideEffectState DebugEvaluate::FunctionGetSideEffectState(
+    Isolate* isolate, Handle&lt;SharedFunctionInfo&gt; info) {
+  
+  // ...
+  
+  // 如果是字节码列表
+  if (info-&gt;HasBytecodeArray()) {
+    // Check bytecodes against allowlist.
+    Handle&lt;BytecodeArray&gt; bytecode_array(info-&gt;GetBytecodeArray(isolate),
+                                         isolate);
+    
+    // 遍历字节码列表，根据三种情况判定
+    bool requires_runtime_checks = false;
+    for (interpreter::BytecodeArrayIterator it(bytecode_array); !it.done();
+         it.Advance()) {
+      interpreter::Bytecode bytecode = it.current_bytecode();
+      if (BytecodeHasNoSideEffect(bytecode)) continue;
+      if (BytecodeRequiresRuntimeCheck(bytecode)) {
+        requires_runtime_checks = true;
+        continue;
+      }
+
+      if (FLAG_trace_side_effect_free_debug_evaluate) {
+        PrintF(&quot;[debug-evaluate] bytecode %s may cause side effect.\n&quot;,
+               interpreter::Bytecodes::ToString(bytecode));
+      }
+
+      // Did not match allowlist.
+      return DebugInfo::kHasSideEffects;
+    }
+    return requires_runtime_checks ? DebugInfo::kRequiresRuntimeChecks
+                                   : DebugInfo::kHasNoSideEffect;
+  } 
+  // 如果是内置 api ，可以直接判定是否有副作用
+  else if (info-&gt;IsApiFunction()) {
+    if (info-&gt;GetCode().is_builtin()) {
+      return info-&gt;GetCode().builtin_id() == Builtin::kHandleApiCall
+                 ? DebugInfo::kHasNoSideEffect
+                 : DebugInfo::kHasSideEffects;
+    }
+  } else {
+    // Check built-ins against allowlist.
+    Builtin builtin =
+        info-&gt;HasBuiltinId() ? info-&gt;builtin_id() : Builtin::kNoBuiltinId;
+    if (!Builtins::IsBuiltinId(builtin)) return DebugInfo::kHasSideEffects;
+    DebugInfo::SideEffectState state = BuiltinGetSideEffectState(builtin);
+    return state;
+  }
+
+  return DebugInfo::kHasSideEffects;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br></div></div><p>实现原理也比较简单，就是对 V8 涉及的基本操作（Bytecode / Builtin / Runtime function）和 Chrome Web APIs 进行标记，标记是否存在副作用，然后在 FunctionGetSideEffectState 中对操作进行遍历即可获知整体是否存在副作用。</p> <p>无副作用的操作列表可以在 <a href="https://source.chromium.org/chromium/chromium/src/+/main:v8/src/debug/debug-evaluate.cc;l=534" target="_blank" rel="noopener noreferrer">debug/debug-evaluate.cc<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 文件的 allowlist 中找到。</p> <p>字节码定义见：<a href="https://source.chromium.org/chromium/chromium/src/+/main:v8/src/interpreter/bytecodes.h;l=26;drc=7cad264ede07ea787f4b81e7dc591a693869b194;bpv=0;bpt=1" target="_blank" rel="noopener noreferrer">bytecodes.h<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="副作用处理"><a href="#副作用处理" class="header-anchor">#</a> 副作用处理</h3> <p>根据上方 PerformSideEffectCheck 的执行，若检测出来了副作用则抛出异常；若检测出来为 <code>kRequiresRuntimeChecks</code> ，则代表该「操作」是否拥有副作用需要在代码运行时进行判断，V8 会将原本的字节码进行替换为 DebugBreak</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ApplySideEffectChecks(debug_info);
+
+// ===
+
+// static
+void DebugEvaluate::ApplySideEffectChecks(
+    Handle&lt;BytecodeArray&gt; bytecode_array) {
+  for (interpreter::BytecodeArrayIterator it(bytecode_array); !it.done();
+       it.Advance()) {
+    interpreter::Bytecode bytecode = it.current_bytecode();
+    if (BytecodeRequiresRuntimeCheck(bytecode)) it.ApplyDebugBreak();
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>之后解释器在执行到 DebugBreak 的字节码时，会通过 <a href="https://source.chromium.org/chromium/chromium/src/+/main:v8/src/debug/debug.cc;l=2404;drc=4ff3e029555ff28d776c8ee9ba1d29de1d635ce7;bpv=1;bpt=1?originalUrl=https:%2F%2Fcs.chromium.org%2F" target="_blank" rel="noopener noreferrer">Debug::PerformSideEffectCheckForObject<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 检测参数是否存在于 temporary_objects_ 对象</p> <div class="language-c++ line-numbers-mode"><pre class="language-text"><code>// 标记临时对象，用于副作用检查。
+class TemporaryObjectsTracker;
+std::unique_ptr&lt;TemporaryObjectsTracker&gt; temporary_objects_;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>temporary_objects_ 是一个 TemporaryObjectsTracker 实例，在预加载时创建，用于记录之后的变量分配和 gc 移动。</p> <p>因此若引用的变量不在 temporary_objects_ ，说明该变量早于预加载前创建，若执行「修改操作的字节码」会有副作用。</p> <p><strong>简单来说，就是创建了一个内存追踪器，若使用的变量不被此追踪器找到，则说明是之前创建的变量，对其赋值操作等会导致副作用</strong></p> <h3 id="startsideeffectcheckmode-做了什么"><a href="#startsideeffectcheckmode-做了什么" class="header-anchor">#</a> StartSideEffectCheckMode 做了什么？</h3> <p>前面提到，在执行脚本之前会执行 StartSideEffectCheckMode 操作。</p> <p>根据上面的一些分析，我们也可以很容易猜到 StartSideEffectCheckMode 做了啥。</p> <p>主要做的就是初始化 <a href="https://source.chromium.org/chromium/chromium/src/+/main:v8/src/debug/debug.h;drc=872e5881a4646e5b257d28ac44dfb4c2f9b54c73;l=543" target="_blank" rel="noopener noreferrer">temporary_objects<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> ，注册了一个内存追踪器。</p> <p>并在 StopSideEffectCheckMode 时进行重置</p> <h2 id="整体流程"><a href="#整体流程" class="header-anchor">#</a> 整体流程</h2> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/24f63826cc4d4aba81e7f2120a2cd903~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p> <h1 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h1> <p>本文对 devtools 执行 js 脚本的整个流程进行了分析。</p> <p>从使用到黑盒测试，再到源码分析，层层深入，希望能对你有所帮助。</p> <p>对于一开始的问题，结论也已在文章开头给出，可以做下回顾。</p> <p>水平不足，如有错误，烦请指正</p> <h1 id="参考文档"><a href="#参考文档" class="header-anchor">#</a> 参考文档</h1> <ul><li><a href="https://zhuanlan.zhihu.com/p/441130756" target="_blank" rel="noopener noreferrer">连载《Chrome V8源码》技术文章<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://zhuanlan.zhihu.com/p/28590489" target="_blank" rel="noopener noreferrer">理解 V8 的字节码「译」<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://www.zhihu.com/question/406157937" target="_blank" rel="noopener noreferrer">为什么在浏览器环境上调用函数，可以提前看到调用结果?<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://segmentfault.com/a/1190000041184017" target="_blank" rel="noopener noreferrer">DevTools 实现原理与性能分析实战<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://zhaomenghuan.js.org/blog/chrome-devtools-frontend-analysis-of-principle.html" target="_blank" rel="noopener noreferrer">Chrome DevTools Frontend 运行原理浅析<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://yjhjstz.gitbooks.io/deep-into-node/content/chapter2/chapter2-0.html" target="_blank" rel="noopener noreferrer">V8 concept<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://blog.dingkewz.com/post/tech/google_v8_core_concepts_01/" target="_blank" rel="noopener noreferrer">谷歌V8引擎探秘：基础概念<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div>  <div class="page-edit"><div class="edit-link"><a href="https://github.com/francecil/blog/edit/master/docs/01.大前端/01.前端基础/执行引擎/V8/Devtools Console 面板输入了 1+1 ，浏览器内部发生了什么？.md" target="_blank" rel="noopener noreferrer">编辑</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2023/04/14, 10:37:48</span></div></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/da3ae7/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">vue-eslint-vscode 通用配置</div></a> <a href="/pages/223f25/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">V8源码解析之Array.prototype.sort</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/da3ae7/" class="prev">vue-eslint-vscode 通用配置</a></span> <span class="next"><a href="/pages/223f25/">V8源码解析之Array.prototype.sort</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/9e54dd/"><div>
+            vuepress踩坑记录
+            <!----></div></a> <span class="date">04-12</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/090a90/"><div>
+            git log 获取文件首次和最新提交记录
+            <!----></div></a> <span class="date">04-09</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/006356/"><div>
+            hybrid 远程调试的前世今生
+            <!----></div></a> <span class="date">10-11</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:396324491@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/francecil" title="GitHub" target="_blank" class="iconfont icon-github"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2016-2023
+    <span>Gahing | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.5d68b1ec.js" defer></script><script src="/assets/js/2.37b38cac.js" defer></script><script src="/assets/js/3.08236b00.js" defer></script><script src="/assets/js/16.be1d4e10.js" defer></script>
+  </body>
+</html>
