@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LearningJS | Gahing&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="/img/favicon.ico">
+    <meta name="description" content="前端技术博客。包括大前端、服务端、通用技术">
+    <meta name="keywords" content="前端博客">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#d1fbf9e6">
+    
+    <link rel="preload" href="/assets/css/0.styles.4de15886.css" as="style"><link rel="preload" href="/assets/js/app.dc012a4b.js" as="script"><link rel="preload" href="/assets/js/2.237b9688.js" as="script"><link rel="preload" href="/assets/js/3.e227eb2c.js" as="script"><link rel="preload" href="/assets/js/61.74b69b3c.js" as="script"><link rel="prefetch" href="/assets/js/10.e5746dd5.js"><link rel="prefetch" href="/assets/js/100.0f558d19.js"><link rel="prefetch" href="/assets/js/101.3d6ab2b5.js"><link rel="prefetch" href="/assets/js/102.f374cd4e.js"><link rel="prefetch" href="/assets/js/103.8edf3d74.js"><link rel="prefetch" href="/assets/js/104.3fd35bed.js"><link rel="prefetch" href="/assets/js/105.0c3cdb23.js"><link rel="prefetch" href="/assets/js/106.b43d76fb.js"><link rel="prefetch" href="/assets/js/107.ab446448.js"><link rel="prefetch" href="/assets/js/108.1e66aff0.js"><link rel="prefetch" href="/assets/js/109.29f5ba3b.js"><link rel="prefetch" href="/assets/js/11.5d831a2b.js"><link rel="prefetch" href="/assets/js/110.1f1003c6.js"><link rel="prefetch" href="/assets/js/111.6c387b9b.js"><link rel="prefetch" href="/assets/js/112.fed4e0b5.js"><link rel="prefetch" href="/assets/js/113.643298e8.js"><link rel="prefetch" href="/assets/js/114.f492f40b.js"><link rel="prefetch" href="/assets/js/115.92d42426.js"><link rel="prefetch" href="/assets/js/116.f7579aab.js"><link rel="prefetch" href="/assets/js/117.06b9b698.js"><link rel="prefetch" href="/assets/js/118.89aade73.js"><link rel="prefetch" href="/assets/js/119.084bc685.js"><link rel="prefetch" href="/assets/js/12.2758cfcd.js"><link rel="prefetch" href="/assets/js/120.9e16d5d5.js"><link rel="prefetch" href="/assets/js/121.ae36917d.js"><link rel="prefetch" href="/assets/js/122.c0300285.js"><link rel="prefetch" href="/assets/js/123.ba57a285.js"><link rel="prefetch" href="/assets/js/124.a2c35a42.js"><link rel="prefetch" href="/assets/js/125.9ef9b92f.js"><link rel="prefetch" href="/assets/js/126.72df36ee.js"><link rel="prefetch" href="/assets/js/127.a78a8428.js"><link rel="prefetch" href="/assets/js/128.396bea7d.js"><link rel="prefetch" href="/assets/js/129.152a65b7.js"><link rel="prefetch" href="/assets/js/13.ff9e0172.js"><link rel="prefetch" href="/assets/js/130.f0504de5.js"><link rel="prefetch" href="/assets/js/131.65c1867e.js"><link rel="prefetch" href="/assets/js/132.cbe1d2a0.js"><link rel="prefetch" href="/assets/js/133.fff83a02.js"><link rel="prefetch" href="/assets/js/134.1571f070.js"><link rel="prefetch" href="/assets/js/135.b48e0076.js"><link rel="prefetch" href="/assets/js/136.d824ef94.js"><link rel="prefetch" href="/assets/js/137.b05e49f9.js"><link rel="prefetch" href="/assets/js/138.7179323e.js"><link rel="prefetch" href="/assets/js/139.740a76b3.js"><link rel="prefetch" href="/assets/js/14.47b6e91e.js"><link rel="prefetch" href="/assets/js/140.d2e54a22.js"><link rel="prefetch" href="/assets/js/141.f536a47d.js"><link rel="prefetch" href="/assets/js/142.15b9c9f8.js"><link rel="prefetch" href="/assets/js/143.fc6a39f7.js"><link rel="prefetch" href="/assets/js/144.66973e1f.js"><link rel="prefetch" href="/assets/js/145.8944c2d3.js"><link rel="prefetch" href="/assets/js/146.88ae2046.js"><link rel="prefetch" href="/assets/js/147.67fcdace.js"><link rel="prefetch" href="/assets/js/148.9b77ac49.js"><link rel="prefetch" href="/assets/js/149.225f2284.js"><link rel="prefetch" href="/assets/js/15.de4d417d.js"><link rel="prefetch" href="/assets/js/150.1521f10e.js"><link rel="prefetch" href="/assets/js/151.92e0b348.js"><link rel="prefetch" href="/assets/js/152.f8a707a9.js"><link rel="prefetch" href="/assets/js/153.ea6e9dfe.js"><link rel="prefetch" href="/assets/js/154.84618cdd.js"><link rel="prefetch" href="/assets/js/155.16807248.js"><link rel="prefetch" href="/assets/js/156.05a44730.js"><link rel="prefetch" href="/assets/js/157.43093a70.js"><link rel="prefetch" href="/assets/js/158.a38a487d.js"><link rel="prefetch" href="/assets/js/159.24a99e5c.js"><link rel="prefetch" href="/assets/js/16.eb482e96.js"><link rel="prefetch" href="/assets/js/160.beaee1e9.js"><link rel="prefetch" href="/assets/js/161.ce337bca.js"><link rel="prefetch" href="/assets/js/162.a2e49d2a.js"><link rel="prefetch" href="/assets/js/163.0e067693.js"><link rel="prefetch" href="/assets/js/164.7445d016.js"><link rel="prefetch" href="/assets/js/165.9d03d9bb.js"><link rel="prefetch" href="/assets/js/166.e29f42cd.js"><link rel="prefetch" href="/assets/js/167.b60380cb.js"><link rel="prefetch" href="/assets/js/168.f3b438b9.js"><link rel="prefetch" href="/assets/js/169.3dd8553b.js"><link rel="prefetch" href="/assets/js/17.53baab98.js"><link rel="prefetch" href="/assets/js/170.9690f7e1.js"><link rel="prefetch" href="/assets/js/171.53ea0955.js"><link rel="prefetch" href="/assets/js/172.d6969381.js"><link rel="prefetch" href="/assets/js/173.a9691cb5.js"><link rel="prefetch" href="/assets/js/174.7193377b.js"><link rel="prefetch" href="/assets/js/175.59039d27.js"><link rel="prefetch" href="/assets/js/176.dfc3a0c5.js"><link rel="prefetch" href="/assets/js/177.d484a8bb.js"><link rel="prefetch" href="/assets/js/178.4a4f64eb.js"><link rel="prefetch" href="/assets/js/179.f9e74cf5.js"><link rel="prefetch" href="/assets/js/18.ec0650b1.js"><link rel="prefetch" href="/assets/js/180.ee54ee12.js"><link rel="prefetch" href="/assets/js/181.38461506.js"><link rel="prefetch" href="/assets/js/182.5bf37518.js"><link rel="prefetch" href="/assets/js/183.0859458b.js"><link rel="prefetch" href="/assets/js/184.92bdef22.js"><link rel="prefetch" href="/assets/js/185.b69845fc.js"><link rel="prefetch" href="/assets/js/186.39cd29ce.js"><link rel="prefetch" href="/assets/js/187.27923269.js"><link rel="prefetch" href="/assets/js/188.b355eefc.js"><link rel="prefetch" href="/assets/js/189.5c8dc591.js"><link rel="prefetch" href="/assets/js/19.c37147e3.js"><link rel="prefetch" href="/assets/js/190.7a339ff8.js"><link rel="prefetch" href="/assets/js/191.c0b7f120.js"><link rel="prefetch" href="/assets/js/192.c31def96.js"><link rel="prefetch" href="/assets/js/193.62edf818.js"><link rel="prefetch" href="/assets/js/194.427073f0.js"><link rel="prefetch" href="/assets/js/195.c20db2dc.js"><link rel="prefetch" href="/assets/js/196.02241c30.js"><link rel="prefetch" href="/assets/js/197.f1c9ff7b.js"><link rel="prefetch" href="/assets/js/198.07c77644.js"><link rel="prefetch" href="/assets/js/199.5ac7415c.js"><link rel="prefetch" href="/assets/js/20.fd9ab357.js"><link rel="prefetch" href="/assets/js/200.8b614718.js"><link rel="prefetch" href="/assets/js/201.c800452f.js"><link rel="prefetch" href="/assets/js/202.88d5a460.js"><link rel="prefetch" href="/assets/js/203.65e017ee.js"><link rel="prefetch" href="/assets/js/204.fc322b36.js"><link rel="prefetch" href="/assets/js/205.868e69bd.js"><link rel="prefetch" href="/assets/js/206.e84493bb.js"><link rel="prefetch" href="/assets/js/207.aca96922.js"><link rel="prefetch" href="/assets/js/208.d75f5ed8.js"><link rel="prefetch" href="/assets/js/209.65df91d3.js"><link rel="prefetch" href="/assets/js/21.40872b30.js"><link rel="prefetch" href="/assets/js/210.4da4bb8b.js"><link rel="prefetch" href="/assets/js/211.ed751481.js"><link rel="prefetch" href="/assets/js/212.9be8d6dc.js"><link rel="prefetch" href="/assets/js/213.4a14ea6c.js"><link rel="prefetch" href="/assets/js/214.1c4186c9.js"><link rel="prefetch" href="/assets/js/215.f8d488e4.js"><link rel="prefetch" href="/assets/js/216.f5b64f4f.js"><link rel="prefetch" href="/assets/js/217.73647d39.js"><link rel="prefetch" href="/assets/js/218.6a70973d.js"><link rel="prefetch" href="/assets/js/219.22423a2b.js"><link rel="prefetch" href="/assets/js/22.8c999c5e.js"><link rel="prefetch" href="/assets/js/220.c152a314.js"><link rel="prefetch" href="/assets/js/221.5f700c7b.js"><link rel="prefetch" href="/assets/js/222.1d95f104.js"><link rel="prefetch" href="/assets/js/223.9b401552.js"><link rel="prefetch" href="/assets/js/224.25763513.js"><link rel="prefetch" href="/assets/js/225.6c562277.js"><link rel="prefetch" href="/assets/js/226.e78fcda7.js"><link rel="prefetch" href="/assets/js/227.0336e64b.js"><link rel="prefetch" href="/assets/js/228.24bdab6b.js"><link rel="prefetch" href="/assets/js/229.19ed8acb.js"><link rel="prefetch" href="/assets/js/23.4d7a37a0.js"><link rel="prefetch" href="/assets/js/230.62331ea2.js"><link rel="prefetch" href="/assets/js/231.aa8cf7f9.js"><link rel="prefetch" href="/assets/js/232.23288a0d.js"><link rel="prefetch" href="/assets/js/233.ab8743fa.js"><link rel="prefetch" href="/assets/js/234.719c5793.js"><link rel="prefetch" href="/assets/js/235.b33ab4d6.js"><link rel="prefetch" href="/assets/js/236.e85796c6.js"><link rel="prefetch" href="/assets/js/237.fc77cddd.js"><link rel="prefetch" href="/assets/js/238.6a21a734.js"><link rel="prefetch" href="/assets/js/239.2802920f.js"><link rel="prefetch" href="/assets/js/24.595704ee.js"><link rel="prefetch" href="/assets/js/240.9d605a58.js"><link rel="prefetch" href="/assets/js/241.d5fea69d.js"><link rel="prefetch" href="/assets/js/242.43a19830.js"><link rel="prefetch" href="/assets/js/243.c9bfb5c3.js"><link rel="prefetch" href="/assets/js/244.7170e9aa.js"><link rel="prefetch" href="/assets/js/245.dd156560.js"><link rel="prefetch" href="/assets/js/246.080c0bb9.js"><link rel="prefetch" href="/assets/js/247.a21ea712.js"><link rel="prefetch" href="/assets/js/248.305863cb.js"><link rel="prefetch" href="/assets/js/249.475710b8.js"><link rel="prefetch" href="/assets/js/25.82ca7d00.js"><link rel="prefetch" href="/assets/js/250.b6c895f6.js"><link rel="prefetch" href="/assets/js/251.e2dd8272.js"><link rel="prefetch" href="/assets/js/252.4c665dbf.js"><link rel="prefetch" href="/assets/js/253.dcc6e21d.js"><link rel="prefetch" href="/assets/js/254.efb33612.js"><link rel="prefetch" href="/assets/js/255.47339fef.js"><link rel="prefetch" href="/assets/js/256.d1e2a1a3.js"><link rel="prefetch" href="/assets/js/257.11bd9c74.js"><link rel="prefetch" href="/assets/js/258.40a49b56.js"><link rel="prefetch" href="/assets/js/259.d9bd0598.js"><link rel="prefetch" href="/assets/js/26.c3018116.js"><link rel="prefetch" href="/assets/js/260.afddb7f5.js"><link rel="prefetch" href="/assets/js/261.5869630e.js"><link rel="prefetch" href="/assets/js/262.0b523312.js"><link rel="prefetch" href="/assets/js/263.856d1c19.js"><link rel="prefetch" href="/assets/js/264.8e10f018.js"><link rel="prefetch" href="/assets/js/265.d305f3d5.js"><link rel="prefetch" href="/assets/js/266.454a9e04.js"><link rel="prefetch" href="/assets/js/267.3c5ad27b.js"><link rel="prefetch" href="/assets/js/268.9910d484.js"><link rel="prefetch" href="/assets/js/269.48526743.js"><link rel="prefetch" href="/assets/js/27.b2432bb1.js"><link rel="prefetch" href="/assets/js/270.b0741c3b.js"><link rel="prefetch" href="/assets/js/271.e84156eb.js"><link rel="prefetch" href="/assets/js/272.9208c9a1.js"><link rel="prefetch" href="/assets/js/273.ef01f63f.js"><link rel="prefetch" href="/assets/js/274.26dc1593.js"><link rel="prefetch" href="/assets/js/275.fcfc973a.js"><link rel="prefetch" href="/assets/js/276.a4f881ad.js"><link rel="prefetch" href="/assets/js/277.f6ae65b1.js"><link rel="prefetch" href="/assets/js/278.b56288ac.js"><link rel="prefetch" href="/assets/js/279.e3ec49fc.js"><link rel="prefetch" href="/assets/js/28.41e46f91.js"><link rel="prefetch" href="/assets/js/280.23c1e1ff.js"><link rel="prefetch" href="/assets/js/281.2f43d7fd.js"><link rel="prefetch" href="/assets/js/282.d3635e6b.js"><link rel="prefetch" href="/assets/js/283.50b2211e.js"><link rel="prefetch" href="/assets/js/284.b851e005.js"><link rel="prefetch" href="/assets/js/285.0c48f889.js"><link rel="prefetch" href="/assets/js/286.9be978a6.js"><link rel="prefetch" href="/assets/js/287.305e217a.js"><link rel="prefetch" href="/assets/js/288.a346a6e6.js"><link rel="prefetch" href="/assets/js/289.37f7cead.js"><link rel="prefetch" href="/assets/js/29.2c97f23c.js"><link rel="prefetch" href="/assets/js/290.f757a0b9.js"><link rel="prefetch" href="/assets/js/291.ef1f2684.js"><link rel="prefetch" href="/assets/js/292.ee7450a3.js"><link rel="prefetch" href="/assets/js/293.01f4c307.js"><link rel="prefetch" href="/assets/js/294.a951c73a.js"><link rel="prefetch" href="/assets/js/295.7a31c1a7.js"><link rel="prefetch" href="/assets/js/296.f7ed327c.js"><link rel="prefetch" href="/assets/js/297.21965ed8.js"><link rel="prefetch" href="/assets/js/298.29a7aa79.js"><link rel="prefetch" href="/assets/js/299.c55086b5.js"><link rel="prefetch" href="/assets/js/30.5ea62e7d.js"><link rel="prefetch" href="/assets/js/300.fbf44641.js"><link rel="prefetch" href="/assets/js/301.719eafbb.js"><link rel="prefetch" href="/assets/js/302.265139ea.js"><link rel="prefetch" href="/assets/js/303.0c7b7448.js"><link rel="prefetch" href="/assets/js/31.f1dae6d0.js"><link rel="prefetch" href="/assets/js/32.03ffc056.js"><link rel="prefetch" href="/assets/js/33.3b2ef099.js"><link rel="prefetch" href="/assets/js/34.45f77472.js"><link rel="prefetch" href="/assets/js/35.d548569d.js"><link rel="prefetch" href="/assets/js/36.78b9acea.js"><link rel="prefetch" href="/assets/js/37.0226035d.js"><link rel="prefetch" href="/assets/js/38.405a5547.js"><link rel="prefetch" href="/assets/js/39.d4447726.js"><link rel="prefetch" href="/assets/js/4.5fe0a195.js"><link rel="prefetch" href="/assets/js/40.cc0e03ff.js"><link rel="prefetch" href="/assets/js/41.3d317c4c.js"><link rel="prefetch" href="/assets/js/42.cc79ca8e.js"><link rel="prefetch" href="/assets/js/43.879e851b.js"><link rel="prefetch" href="/assets/js/44.8b78d8f2.js"><link rel="prefetch" href="/assets/js/45.023cb524.js"><link rel="prefetch" href="/assets/js/46.0deb2f77.js"><link rel="prefetch" href="/assets/js/47.0ce2997f.js"><link rel="prefetch" href="/assets/js/48.47efc90c.js"><link rel="prefetch" href="/assets/js/49.fe702ccd.js"><link rel="prefetch" href="/assets/js/5.21cdb028.js"><link rel="prefetch" href="/assets/js/50.9f143414.js"><link rel="prefetch" href="/assets/js/51.e4198cff.js"><link rel="prefetch" href="/assets/js/52.31ccaae4.js"><link rel="prefetch" href="/assets/js/53.ad3673a4.js"><link rel="prefetch" href="/assets/js/54.8fb4b0e2.js"><link rel="prefetch" href="/assets/js/55.43e24d37.js"><link rel="prefetch" href="/assets/js/56.133d653d.js"><link rel="prefetch" href="/assets/js/57.2dc2445b.js"><link rel="prefetch" href="/assets/js/58.0c4f88d4.js"><link rel="prefetch" href="/assets/js/59.d3808f84.js"><link rel="prefetch" href="/assets/js/6.13a5e987.js"><link rel="prefetch" href="/assets/js/60.b73dfdba.js"><link rel="prefetch" href="/assets/js/62.0a205744.js"><link rel="prefetch" href="/assets/js/63.fc7cf400.js"><link rel="prefetch" href="/assets/js/64.72cff546.js"><link rel="prefetch" href="/assets/js/65.8d164bb9.js"><link rel="prefetch" href="/assets/js/66.e2154c1b.js"><link rel="prefetch" href="/assets/js/67.49ae84a2.js"><link rel="prefetch" href="/assets/js/68.ab4dd60b.js"><link rel="prefetch" href="/assets/js/69.a02967b0.js"><link rel="prefetch" href="/assets/js/7.ceba6ae1.js"><link rel="prefetch" href="/assets/js/70.aeee1623.js"><link rel="prefetch" href="/assets/js/71.9773ff05.js"><link rel="prefetch" href="/assets/js/72.144d5e48.js"><link rel="prefetch" href="/assets/js/73.40b657e8.js"><link rel="prefetch" href="/assets/js/74.f9ee6cda.js"><link rel="prefetch" href="/assets/js/75.abe8de16.js"><link rel="prefetch" href="/assets/js/76.5ddbb0fb.js"><link rel="prefetch" href="/assets/js/77.d33e036a.js"><link rel="prefetch" href="/assets/js/78.021dc205.js"><link rel="prefetch" href="/assets/js/79.4b9eb768.js"><link rel="prefetch" href="/assets/js/8.72ed7681.js"><link rel="prefetch" href="/assets/js/80.f0fc0b90.js"><link rel="prefetch" href="/assets/js/81.4825daee.js"><link rel="prefetch" href="/assets/js/82.553619ff.js"><link rel="prefetch" href="/assets/js/83.b0ec55cb.js"><link rel="prefetch" href="/assets/js/84.05540c64.js"><link rel="prefetch" href="/assets/js/85.80efad6d.js"><link rel="prefetch" href="/assets/js/86.b396a3e8.js"><link rel="prefetch" href="/assets/js/87.84550e87.js"><link rel="prefetch" href="/assets/js/88.d674d83d.js"><link rel="prefetch" href="/assets/js/89.9c360e00.js"><link rel="prefetch" href="/assets/js/9.7bea4558.js"><link rel="prefetch" href="/assets/js/90.24f42fda.js"><link rel="prefetch" href="/assets/js/91.414b942b.js"><link rel="prefetch" href="/assets/js/92.55983f65.js"><link rel="prefetch" href="/assets/js/93.d4e8d7c2.js"><link rel="prefetch" href="/assets/js/94.5900a748.js"><link rel="prefetch" href="/assets/js/95.dece11d8.js"><link rel="prefetch" href="/assets/js/96.4e3effaf.js"><link rel="prefetch" href="/assets/js/97.aea8b066.js"><link rel="prefetch" href="/assets/js/98.54aa9bbc.js"><link rel="prefetch" href="/assets/js/99.2a71c2eb.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4de15886.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu have-body-img"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="Gahing's blog" class="logo"> <span class="site-name can-hide">Gahing's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/fe/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>前端基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/2e58d1/" class="nav-link">JavaScript</a></li><li class="dropdown-subitem"><a href="/pages/7d9673/" class="nav-link">HTML</a></li><li class="dropdown-subitem"><a href="/pages/c1c6f3/" class="nav-link">CSS</a></li><li class="dropdown-subitem"><a href="/pages/df8030/" class="nav-link">TypeScript</a></li><li class="dropdown-subitem"><a href="/pages/25ca35/" class="nav-link">WebAssembly</a></li></ul></li><li class="dropdown-item"><h4>UI 框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/b4d8a3/" class="nav-link">React</a></li><li class="dropdown-subitem"><a href="/pages/b5decb/" class="nav-link">Vue</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="服务端" class="dropdown-title"><a href="/server/" class="link-title">服务端</a> <span class="title" style="display:none;">服务端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>中间件</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/c29f00/" class="nav-link">Redis</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="通用技术" class="dropdown-title"><a href="/technology/" class="link-title">通用技术</a> <span class="title" style="display:none;">通用技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/703e88/" class="nav-link">Git</a></li><li class="dropdown-item"><!----> <a href="/pages/58bfaf/" class="nav-link">网络基础</a></li><li class="dropdown-item"><!----> <a href="/pages/eca777/" class="nav-link">算法与数据结构</a></li><li class="dropdown-item"><h4>其他技术领域</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/app/" class="nav-link">客户端</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/product/" class="nav-link">产品设计</a></li><li class="dropdown-item"><!----> <a href="/pages/c70629/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/pages/f00c67/" class="nav-link">人生总结</a></li><li class="dropdown-item"><!----> <a href="/soft-quality/" class="nav-link">软素质</a></li><li class="dropdown-item"><h4>实用技巧</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/d3622e/" class="nav-link">markdown 技巧</a></li></ul></li><li class="dropdown-item"><h4>知识科普</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/d3f796/" class="nav-link">地理坐标系</a></li></ul></li><li class="dropdown-item"><h4>收藏夹</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/f06636/" class="nav-link">网站</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/francecil/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="/img/avatar.jpeg"> <div class="blogger-info"><h3>Gahing</h3> <span>To be best</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/fe/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>前端基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/2e58d1/" class="nav-link">JavaScript</a></li><li class="dropdown-subitem"><a href="/pages/7d9673/" class="nav-link">HTML</a></li><li class="dropdown-subitem"><a href="/pages/c1c6f3/" class="nav-link">CSS</a></li><li class="dropdown-subitem"><a href="/pages/df8030/" class="nav-link">TypeScript</a></li><li class="dropdown-subitem"><a href="/pages/25ca35/" class="nav-link">WebAssembly</a></li></ul></li><li class="dropdown-item"><h4>UI 框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/b4d8a3/" class="nav-link">React</a></li><li class="dropdown-subitem"><a href="/pages/b5decb/" class="nav-link">Vue</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="服务端" class="dropdown-title"><a href="/server/" class="link-title">服务端</a> <span class="title" style="display:none;">服务端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>中间件</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/c29f00/" class="nav-link">Redis</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="通用技术" class="dropdown-title"><a href="/technology/" class="link-title">通用技术</a> <span class="title" style="display:none;">通用技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/703e88/" class="nav-link">Git</a></li><li class="dropdown-item"><!----> <a href="/pages/58bfaf/" class="nav-link">网络基础</a></li><li class="dropdown-item"><!----> <a href="/pages/eca777/" class="nav-link">算法与数据结构</a></li><li class="dropdown-item"><h4>其他技术领域</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/app/" class="nav-link">客户端</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/product/" class="nav-link">产品设计</a></li><li class="dropdown-item"><!----> <a href="/pages/c70629/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/pages/f00c67/" class="nav-link">人生总结</a></li><li class="dropdown-item"><!----> <a href="/soft-quality/" class="nav-link">软素质</a></li><li class="dropdown-item"><h4>实用技巧</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/d3622e/" class="nav-link">markdown 技巧</a></li></ul></li><li class="dropdown-item"><h4>知识科普</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/d3f796/" class="nav-link">地理坐标系</a></li></ul></li><li class="dropdown-item"><h4>收藏夹</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/f06636/" class="nav-link">网站</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/francecil/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>前端基础</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>前端调试</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>开发工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>执行引擎</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>浏览器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>编程语言</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-2"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-2"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-2"><p class="sidebar-heading open"><span>JavaScript</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/2e58d1/" class="sidebar-link">ECMAScript6入门</a></li><li><a href="/pages/abd3d0/" class="sidebar-link">Promise then 原理分析</a></li><li><a href="/pages/a198a9/" class="sidebar-link">JS技巧</a></li><li><a href="/pages/8b553a/" aria-current="page" class="active sidebar-link">LearningJS</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#一元" class="sidebar-link">一元+</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#labelname-statement" class="sidebar-link">labelName:statement</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#with-expression-statement" class="sidebar-link">with(expression) statement</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#switch中比较用的是" class="sidebar-link">switch中比较用的是===</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#function" class="sidebar-link">function</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#参数的数量不一定要和指定的一致" class="sidebar-link">参数的数量不一定要和指定的一致</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#没有重载" class="sidebar-link">没有重载</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#变量" class="sidebar-link">变量</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#instanceof-判断是什么类型的引用" class="sidebar-link">instanceof 判断是什么类型的引用</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#作用域" class="sidebar-link">作用域</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#没有块级作用域-注-es6有" class="sidebar-link">没有块级作用域(注：es6有)</a></li><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#在局部里初始化的变量-没有声明-则-将其作用域变成全局-严格模式下不声明就初始化将报错" class="sidebar-link">在局部里初始化的变量 没有声明，则 将其作用域变成全局 严格模式下不声明就初始化将报错</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#gc" class="sidebar-link">GC</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#object" class="sidebar-link">Object</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#array" class="sidebar-link">Array</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#splice-返回值为被删除的项数组" class="sidebar-link">splice 返回值为被删除的项数组</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#date" class="sidebar-link">Date</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#regexp-用来支持正则" class="sidebar-link">RegExp 用来支持正则</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#一些长短属性名-使用时查即可" class="sidebar-link">一些长短属性名 使用时查即可</a></li><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#局限性" class="sidebar-link">局限性</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#function-2" class="sidebar-link">Function</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#函数内部属性" class="sidebar-link">函数内部属性</a></li><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#this" class="sidebar-link">this</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#单体内置对象" class="sidebar-link">单体内置对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#eval-注意非严格模式下的注意点" class="sidebar-link">eval 注意非严格模式下的注意点</a></li><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#math" class="sidebar-link">Math</a></li><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#数据属性" class="sidebar-link">数据属性</a></li><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#访问器属性" class="sidebar-link">访问器属性</a></li><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#define-muiti-properties" class="sidebar-link">define muiti properties</a></li><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#读取属性特性" class="sidebar-link">读取属性特性</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#创建对象" class="sidebar-link">创建对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#工厂模式" class="sidebar-link">工厂模式</a></li><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#实例模式" class="sidebar-link">实例模式</a></li><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#原型模式-prototype" class="sidebar-link">原型模式 prototype</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#继承" class="sidebar-link">继承</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#递归" class="sidebar-link">递归</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#闭包" class="sidebar-link">闭包</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#window-对象" class="sidebar-link">window 对象</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#location-对象" class="sidebar-link">location 对象</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#navigator-对象" class="sidebar-link">navigator 对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#检测插件" class="sidebar-link">检测插件</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#dom2级事件处理" class="sidebar-link">DOM2级事件处理</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#事件类型" class="sidebar-link">事件类型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#html5-事件类型" class="sidebar-link">HTML5 事件类型</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#内存和性能" class="sidebar-link">内存和性能</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#模拟事件" class="sidebar-link">模拟事件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#模拟鼠标事件" class="sidebar-link">模拟鼠标事件</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#文本选择-range" class="sidebar-link">文本选择 Range.</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#过滤输入" class="sidebar-link">过滤输入</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#剪切板" class="sidebar-link">剪切板</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#h5约束验证" class="sidebar-link">H5约束验证</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#选择框脚本" class="sidebar-link">选择框脚本</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#富文本" class="sidebar-link">富文本</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#上下文context" class="sidebar-link">上下文Context</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#变换" class="sidebar-link">变换</a></li><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#绘制图像" class="sidebar-link">绘制图像</a></li><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#阴影" class="sidebar-link">阴影</a></li><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#渐变" class="sidebar-link">渐变</a></li><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#模式" class="sidebar-link">模式</a></li><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#使用图像数据" class="sidebar-link">使用图像数据</a></li><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#合成" class="sidebar-link">合成</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#webgl" class="sidebar-link">WebGL</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#跨文档消息传递" class="sidebar-link">跨文档消息传递</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#拖放-重点" class="sidebar-link">拖放(重点)</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#媒体元素" class="sidebar-link">媒体元素</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#历史状态管理" class="sidebar-link">历史状态管理</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#错误处理" class="sidebar-link">错误处理</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#调试技术" class="sidebar-link">调试技术</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#抛出错误" class="sidebar-link">抛出错误</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#stringify" class="sidebar-link">stringify</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#用法-xhr-1级" class="sidebar-link">用法 XHR-1级</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#xhr2级规范" class="sidebar-link">XHR2级规范</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#进度事件" class="sidebar-link">进度事件</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#跨源资源共享cors" class="sidebar-link">跨源资源共享CORS</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#其他跨域技术" class="sidebar-link">其他跨域技术</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#_1-图像ping" class="sidebar-link">1.图像Ping</a></li><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#_2-jsonp" class="sidebar-link">2.JSONP</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#可维护" class="sidebar-link">可维护</a></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#性能" class="sidebar-link">性能</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/8b553a/#_4-优化dom交互" class="sidebar-link">4.优化DOM交互</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/8b553a/#部署" class="sidebar-link">部署</a></li></ul></li><li><a href="/pages/25c3a4/" class="sidebar-link">async 函数编译原理</a></li><li><a href="/pages/e3944e/" class="sidebar-link">你不知道的JavaScript(上)</a></li><li><a href="/pages/3efddd/" class="sidebar-link">再谈闭包</a></li><li><a href="/pages/654fcb/" class="sidebar-link">前端实现相对路径转绝对路径的几种方法</a></li><li><a href="/pages/756349/" class="sidebar-link">为什么 0.._ 等于 undefined</a></li><li><a href="/pages/b88999/" class="sidebar-link">前端项目中常用的位操作技巧</a></li><li><a href="/pages/13c750/" class="sidebar-link">趣味js-只用特殊字符生成任意字符串</a></li><li><a href="/pages/cc7c92/" class="sidebar-link">重学 JS 原型链</a></li><li><a href="/pages/61262f/" class="sidebar-link">面试官问：怎么避免函数调用栈溢出</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-2"><p class="sidebar-heading"><span>TypeScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-2"><p class="sidebar-heading"><span>WebAssembly</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>应用框架</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工程能力</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>应用基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>专业领域</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>业务场景</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/pages/dc9a8f/" class="sidebar-link">大前端知识体系</a></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06970110><div class="articleInfo" data-v-06970110><ul class="breadcrumbs" data-v-06970110><li data-v-06970110><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-06970110></a></li> <li data-v-06970110><a href="/fe/#大前端" data-v-06970110>大前端</a></li><li data-v-06970110><a href="/fe/#前端基础" data-v-06970110>前端基础</a></li><li data-v-06970110><a href="/fe/#编程语言" data-v-06970110>编程语言</a></li><li data-v-06970110><a href="/fe/#JavaScript" data-v-06970110>JavaScript</a></li></ul> <div class="info" data-v-06970110><div title="作者" class="author iconfont icon-touxiang" data-v-06970110><a href="https://github.com/francecil" target="_blank" title="作者" class="beLink" data-v-06970110>gahing</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-06970110><a href="javascript:;" data-v-06970110>2017-02-14</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">LearningJS<span class="title-tag">草稿</span></h1>  <div class="theme-vdoing-content content__default"><p>[TOC]</p> <p>#基础</p> <p>以下属性只适合外部脚本
+async=&quot;async&quot; 异步下载资源，下载完毕后立刻执行，堵塞dom解析，建议异步的脚本不要进行DOM修改 不能确定谁先谁后，一定会在load事件之前完成
+defer=&quot;defer&quot; 等文档解析完再加载
+不存在上面两个属性的，按先后顺序依次对js进行解析
+浏览器在遇到</p><body>才开始呈现页面内容 所以 一些判断是手机还是pc然后跳转的就可以把js放到head中<p></p> <p>https://segmentfault.com/a/1190000006778717</p> <h2 id="一元"><a href="#一元" class="header-anchor">#</a> 一元+</h2> <p>var a=&quot;12&quot;;
+a=+a;  a=12 有转换为数字的功效
+== != 会先转型 再比较
+=== !== 不转型 先比较类型
+for(var property in 对象){
+console.log(property);输出对象的所有属性
+}</p> <h2 id="labelname-statement"><a href="#labelname-statement" class="header-anchor">#</a> labelName:statement</h2> <p>break和continue后面+上label名即可跳转到该处运行
+最好不要用label。。
+一般使用场景
+thisIsLable:
+for(){
+for(){
+if(){
+continue thisIsLable;//退出内部循环，继续外部循环
+//or
+break thisIsLable;//退出内外部循环
+}
+}
+}</p> <h2 id="with-expression-statement"><a href="#with-expression-statement" class="header-anchor">#</a> with(expression) statement</h2> <p>ex:
+var qs=location.a().c;
+var url=localtion.b;
+var vf = localtion.d;</p> <p>with(location){
+var qs=a().c;
+var url=b;
+var vf = d;
+}
+注：a().c,b,d 以上变量在with中首先会被认为是局部变量，如果找不到定义，在看location有没有同名属性。
+qs,url,vf可以被with(){}外访问到(作用链延长)..
+注2：严格模式不允许使用with</p> <h2 id="switch中比较用的是"><a href="#switch中比较用的是" class="header-anchor">#</a> switch中比较用的是===</h2> <h2 id="function"><a href="#function" class="header-anchor">#</a> function</h2> <h3 id="参数的数量不一定要和指定的一致"><a href="#参数的数量不一定要和指定的一致" class="header-anchor">#</a> 参数的数量不一定要和指定的一致</h3> <p>若function()无指定参数名,通过arguments[i]来获取
+也可以与function(name1,name2){}中的name1,name2一起用
+name1与arguments[0]值一样，可以同时用，并保持单向同步
+注0：修改arguments[0]的值会同步name1的值，但修改name1的值不会同步arguments[0]的值
+也就是说并非引用同一内存地址，内存空间是独立的，只是通过某种手段去同步
+没有被传递值的命名参数默认为undefined
+###非严格模式下，传入一个参数，改变arguments[1]的值，name2不会改变还是undefined
+###严格模式下，也是undefined,并且传入2个参数的情况，对arguments[1]的修改不会影响name2,即 无单向同步</p> <h2 id="没有重载"><a href="#没有重载" class="header-anchor">#</a> 没有重载</h2> <p>定义多个function 即使参数个数不一致，也只会调用最后一个定义的，所以重载只能通过在function中判断参数个数和类型来做了</p> <h2 id="变量"><a href="#变量" class="header-anchor">#</a> 变量</h2> <p>可以给对象动态的增加属性
+基本类型a=b 是值复制，对象是引用复制(同一堆内存地址)
+参数传递也是值和引用两种，和Java类似</p> <h2 id="instanceof-判断是什么类型的引用"><a href="#instanceof-判断是什么类型的引用" class="header-anchor">#</a> instanceof 判断是什么类型的引用</h2> <h2 id="作用域"><a href="#作用域" class="header-anchor">#</a> 作用域</h2> <p>一般只有全局和局部</p> <h3 id="没有块级作用域-注-es6有"><a href="#没有块级作用域-注-es6有" class="header-anchor">#</a> 没有块级作用域(注：es6有)</h3> <p>if(1){
+var a=&quot;h&quot;
+}
+alert(a);//&quot;h&quot;</p> <h3 id="在局部里初始化的变量-没有声明-则-将其作用域变成全局-严格模式下不声明就初始化将报错"><a href="#在局部里初始化的变量-没有声明-则-将其作用域变成全局-严格模式下不声明就初始化将报错" class="header-anchor">#</a> 在局部里初始化的变量 没有声明，则 将其作用域变成全局 严格模式下不声明就初始化将报错</h3> <h2 id="gc"><a href="#gc" class="header-anchor">#</a> GC</h2> <p>#引用类型</p> <h2 id="object"><a href="#object" class="header-anchor">#</a> Object</h2> <p>定义对象时最后一个属性不加逗号
+创建对象基本方式
+1.var obj=new Object();
+obj.name1=value1;
+2.var obj = {
+name1:value1,
+name2:value2
+};
+赋值可以混合使用， 初始化也可以这样：var obj={};</p> <h2 id="array"><a href="#array" class="header-anchor">#</a> Array</h2> <p>var array1=new Array([num]);//num可选 为初始化长度，可以直接初始化值 = new Array(&quot;a&quot;,1,true);
+方式2 var array2=[&quot;b&quot;,2,false];
+注意 length不是只读 增大 访问项为undefined 减小length 没掉的访问项为undefined
+检测数组，为了让其在多个可能存在的全局对象中统一，不用 instanceof
+而是用 Array.isArray(xxx)
+array1.join(&quot;;&quot;)将array1的分隔符改为；并返回
+newLength=array1.push(value) newLength=array1.pop()
+firstValue=array1.shift():取出第一项
+newLength=array1.unshift(value)插入到第一项 之前元素后推
+sort(compare)和reverse(compare) 正逆序排序
+function compare(value1,value2){
+...ex: v1&lt;v2 return -1
+}
+var a2=array1.concat(&quot;a&quot;,&quot;b&quot;);//array1复制后再加上 a,b
+var a3=array1.slice(1,2);//剪裁
+这两个函数都不会影响原数组</p> <h3 id="splice-返回值为被删除的项数组"><a href="#splice-返回值为被删除的项数组" class="header-anchor">#</a> splice 返回值为被删除的项数组</h3> <p>删除：splice(要删除的起始项，要删除的项数)
+插入：splice(要插入的起始项，0，&quot;a&quot;,&quot;b&quot;...插入的项)
+替换：splice(要替换的起始项，要删除的项数，&quot;a&quot;,&quot;b&quot;...)</p> <p>indexOf(要查找的项，查找起始项的索引);
+lastIndexOf(xx,xx);
+###迭代
+every(function(item,index,array){
+//每一项都运行给定函数，如果都返回true 则返回true;
+...（给定函数）
+});
+filter()//每一项都运行给定函数，返回该函数会返回true的项数组
+forEach()//每一项都会运行给定函数，无返回值
+map()//每一项都会运行给定函数 返回 每次函数返回结果 构成的数组
+some//存在一项运行函数返回true则返回true
+reduce//项从左往右执行 function第一个参数值在第一次运行时为第一项的值
+reduceRight(function(上一个函数运行的结果，当前项的值，index,array){
+...
+});</p> <h2 id="date"><a href="#date" class="header-anchor">#</a> Date</h2> <p>var a=new Date();
+Date.now() 获得毫秒数</p> <h2 id="regexp-用来支持正则"><a href="#regexp-用来支持正则" class="header-anchor">#</a> RegExp 用来支持正则</h2> <p>var expreesion=/ pattern / flags
+var ex2=new RegExp{&quot;[cc]at&quot;,i};
+flags:
+g:全局匹配，而非发现第一个匹配就停止
+i:不区分大小写模式，只找第一个匹配
+gi:全局匹配且不区分大小写
+m:多行模式，到达一行文本末尾会继续查找下一行中的匹配 也就是说不用特地去管换行符，所有行组成一行的概念</p> <p>ex2.test(&quot;adasdasdaskdjlqd&quot;);true or false
+var matches=ex2.exec(匹配串)//返回第一个匹配项信息的数组  注意：即使设置为g也只会返回第一个但是多次调用会返回下一个
+该数组第一项matches[0]为与整个模式匹配的字符串,其他项为matches[0]匹配模式的字符串?</p> <h3 id="一些长短属性名-使用时查即可"><a href="#一些长短属性名-使用时查即可" class="header-anchor">#</a> 一些长短属性名 使用时查即可</h3> <h3 id="局限性"><a href="#局限性" class="header-anchor">#</a> 局限性</h3> <h2 id="function-2"><a href="#function-2" class="header-anchor">#</a> Function</h2> <p>JS引擎会把函数声明提升到顶部，所以函数调用可以在函数声明之前，但是把函数声明改为函数表达式将报错
+ex:
+sum(10,10)
+function sum(a,b){return a+b;}
+改为
+sum(10,10)
+var sum=function(a,b){return a+b;};将报错</p> <h3 id="函数内部属性"><a href="#函数内部属性" class="header-anchor">#</a> 函数内部属性</h3> <p>arguments.callee 等价于拥有arguments该对象的函数
+用来解决函数名耦合的问题，后面用其他变量名引用函数也方便使用</p> <h3 id="this"><a href="#this" class="header-anchor">#</a> this</h3> <p>a.call(作用域比如window,argument1,argument2,...);
+Function a(){
+this.xxx ;//通过call调用a函数this即call传过来的作用域
+}
+apply()用法类似，只是第二个参数是arguments，或者[a,b]数组
+//num.toPrecision(num) 指数表示法 num:小数位数</p> <h2 id="单体内置对象"><a href="#单体内置对象" class="header-anchor">#</a> 单体内置对象</h2> <p>encodeURI 只转空格.
+enCodeURLComponent 任何非标准字符（: / $npsb等 ）都会进行编码 :<strong>用于发送给服务器的数据编码</strong></p> <h3 id="eval-注意非严格模式下的注意点"><a href="#eval-注意非严格模式下的注意点" class="header-anchor">#</a> eval 注意非严格模式下的注意点</h3> <h3 id="math"><a href="#math" class="header-anchor">#</a> Math</h3> <div class="language- extra-class"><pre><code>ceil()上界
+floor()下界
+round()四舍五入
+random() 0~1间的随机数不包括0,1
+</code></pre></div><p>得到[2,32]间的随机数</p> <div class="language- extra-class"><pre><code>Math.floor(Math.random()*31+2)
+</code></pre></div><h1 id="面向对象"><a href="#面向对象" class="header-anchor">#</a> 面向对象</h1> <p>var person={
+age:17,
+name:&quot;ss&quot;,
+say:function(){
+xx
+}
+}</p> <h3 id="数据属性"><a href="#数据属性" class="header-anchor">#</a> 数据属性</h3> <p>Object.defineProperty(person,&quot;name&quot;,{
+configurable:false, //默认true,不能通过delete删除属性从而重新定义属性,不能通过访问器属性修改属性
+value:&quot;zjx&quot;,    //默认undefine,该属性的值
+wriable:false,  //默认true,数据只读不可写
+Enimerable:true //默认true,可以通过for-in 循环返回属性
+});
+在调用该方法时，如果不指定，configurable，wriable，Enimerable特性的默认值都是false
+配置</p> <h3 id="访问器属性"><a href="#访问器属性" class="header-anchor">#</a> 访问器属性</h3> <p>var book={
+<em>year:2011, //‘</em>’一种常用标志，用于表示只能通过对象方法访问的属性
+edition:1
+}
+Configurable 同上，能否把属性修改为数据属性
+enumerable
+get:function(){}
+set:function(newValue){}
+访问器属性不能直接定义，只能通过下面方法
+Object.defineProperty(book,&quot;year&quot;{ //访问器属性year
+get:function(){
+return this._year;
+},
+set:function(newValue){
+this._year=newValue;
+this.edition+=newValue-2011;
+}
+});
+通过
+book.year=2010;//可以正确的设置book._year和edition
+只指定getter意味着不能写，只指定setter的属性不可读，严格模式下读写未指定的会报错</p> <h3 id="define-muiti-properties"><a href="#define-muiti-properties" class="header-anchor">#</a> define muiti properties</h3> <p>Object.definePropertites(book,{
+_year:{
+value:2011
+},
+year:{
+get..set..
+}
+});</p> <h3 id="读取属性特性"><a href="#读取属性特性" class="header-anchor">#</a> 读取属性特性</h3> <p>var descriptor=Object.getOwnpropertyDescriptor(book,&quot;_year&quot;);
+console.log(descriptor.value);//2011
+descriptor.configurable;//false 默认false？</p> <h2 id="创建对象"><a href="#创建对象" class="header-anchor">#</a> 创建对象</h2> <h3 id="工厂模式"><a href="#工厂模式" class="header-anchor">#</a> 工厂模式</h3> <p>function CreatePerson(a,b,c){
+var o=new Object();
+o.a=a;
+...
+return o;
+}
+var person=Create(..);</p> <h3 id="实例模式"><a href="#实例模式" class="header-anchor">#</a> 实例模式</h3> <p>//function person(a,b,c){
+//	this.a=a;
+//  ...
+//	this.sayName=function(){}
+//};
+var person1=new Person(..)</p> <h3 id="原型模式-prototype"><a href="#原型模式-prototype" class="header-anchor">#</a> 原型模式 prototype</h3> <p>每个函数都有一个prototype属性，指向一个对象
+function Person(){
+}
+Person.prototype.name=&quot;abc&quot;;
+var person1=new Person();
+...
+初步了解，后续待研究
+注意原型和构造的区别</p> <h2 id="继承"><a href="#继承" class="header-anchor">#</a> 继承</h2> <p>略 待上部分研究完毕</p> <h1 id="函数表达式"><a href="#函数表达式" class="header-anchor">#</a> 函数表达式</h1> <p>var func=function(){} //匿名函数</p> <p>var func;
+if(condition){
+func=function(){};
+}else{
+func=function(){};
+}
+否则用函数声明时
+if(condition){
+function func(){};
+}else{
+function func(){};
+}
+会报错</p> <h2 id="递归"><a href="#递归" class="header-anchor">#</a> 递归</h2> <p>function factorial(num){
+if(num&lt;=1){
+return 1;
+}else{
+return num<em>factorial(num-1);
+}
+}
+var abc=factorial;//用另外一个变量指示该函数
+factorial=null;//原函数引用只剩abc
+console.log(abc(5));//error 找不到factorial
+之前说过可以用arguments.calllee
+return num</em>factorial(num-1); =&gt; return num<em>arguments.calllee(num-1);
+但是严格模式下不能调用arguments.calllee,访问该属性会出错
+通过函数命名表达式来解决
+var factorial={function f(num){
+...
+return num</em>f(num-1);
+}}
+即使factorial赋值给其他对象，f仍然有效</p> <h2 id="闭包"><a href="#闭包" class="header-anchor">#</a> 闭包</h2> <h1 id="bom"><a href="#bom" class="header-anchor">#</a> BOM</h1> <h2 id="window-对象"><a href="#window-对象" class="header-anchor">#</a> window 对象</h2> <p>setTimeout and setInterval</p> <p>(fun/string,time)</p> <p>将在指定time后把任务发给任务队列，队列空则开始执行，也就是说，上一任务还未结束则等待</p> <p>(js单线程，共用同一个任务队列</p> <div class="language- extra-class"><pre><code>&lt;script&gt;
+		for(var i = 1; i &lt;= 3; i++) {
+			setTimeout(function() {
+				console.log(i)
+			}, 0)
+		}
+&lt;/script&gt;
+</code></pre></div><p>setTimeout把任务添加进任务队列，但是需要等先进任务队列的for循环。故最后输出三个4.</p> <h2 id="location-对象"><a href="#location-对象" class="header-anchor">#</a> location 对象</h2> <p>假设初始是 <code>http://www.abc.com:8080/hello</code></p> <p>将url修改为<code>http://www.abc.com:8080/hello#section1</code></p> <p>location.hash=&quot;@section1&quot;;</p> <p>将url修改为<code>http://www.abc.com:8080/hello?q=111</code></p> <p>location.search=&quot;?q=111&quot;</p> <p>其他的hostname,pathname,port的修改方法类似</p> <p>除hash外 其他调用都会以新url加载</p> <p>location.reload(bool) 重新加载，是否从本地缓存获取数据</p> <h2 id="navigator-对象"><a href="#navigator-对象" class="header-anchor">#</a> navigator 对象</h2> <h3 id="检测插件"><a href="#检测插件" class="header-anchor">#</a> 检测插件</h3> <p>IE 不可用</p> <div class="language- extra-class"><pre><code>	&lt;script&gt;
+		for(var i=0;i&lt;navigator.plugins.length;i++){
+		console.log(navigator.plugins[i].name);
+	}
+	&lt;/script&gt;
+</code></pre></div><h1 id="事件"><a href="#事件" class="header-anchor">#</a> 事件</h1> <p>尽量只用冒泡事件流</p> <p>事件流程：捕获（document-&gt;dom对象-&gt;具体元素) -&gt; 冒泡(具体元素-&gt;dom对象-&gt;document)</p> <h2 id="dom2级事件处理"><a href="#dom2级事件处理" class="header-anchor">#</a> DOM2级事件处理</h2> <p><code>dom元素.addEventListener(&quot;事件名如click&quot;,处理函数,boolean值：冒泡处理false还是捕获阶段处理true[一般是使用冒泡])</code>;</p> <p>如果处理函数是匿名函数，则无法通过<code>removeEventListener(,,)[参数一致]</code>移除</p> <p><code>stopPropagation</code> 停止继续冒泡or捕获</p> <p>封装EventUtil 来处理IE 和其他浏览器，见pdf 13章</p> <p><code>preventDefault(event)</code> 屏蔽默认方法</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>test1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.test1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.test1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>Q：点击div.test1后，数字1和2的出现顺序是什么样的？</p> <p>A: 1,2 此时该元素处于目标元素，不存在什么冒泡或捕获阶段</p> <p>注意：点击label时，默认处理会focus对应的控件并执行点击操作（可以用preventDefault取消）</p> <p>所以对于<code>&lt;label&gt;Click me&lt;input type=&quot;text&quot;&gt;&lt;/label&gt;</code> 这类的，事件绑定在label时要额外注意</p> <h2 id="事件类型"><a href="#事件类型" class="header-anchor">#</a> 事件类型</h2> <h3 id="html5-事件类型"><a href="#html5-事件类型" class="header-anchor">#</a> HTML5 事件类型</h3> <blockquote><p>contextmenu 上下文菜单</p></blockquote> <p>win为浏览器时鼠标右键填出的窗口</p> <p>可捕获该事件并屏蔽默认事件，然后弹出自定义窗口</p> <blockquote><p>beforeunload 页面被关闭前触发</p></blockquote> <p>一般用于询问用户是否真的要关闭页面</p> <h2 id="内存和性能"><a href="#内存和性能" class="header-anchor">#</a> 内存和性能</h2> <p>1.多次注册监听事件影响性能，可以利用事件委托，在尽量高层添加事件处理程序</p> <p>2.在不需要的时候移除事件处理程序</p> <p>在卸载页面前，先通过<code>onunload</code>事件处理移除所有事件处理程序。</p> <p>所以多用事件委托，移除就更容易</p> <h2 id="模拟事件"><a href="#模拟事件" class="header-anchor">#</a> 模拟事件</h2> <h3 id="模拟鼠标事件"><a href="#模拟鼠标事件" class="header-anchor">#</a> 模拟鼠标事件</h3> <div class="language- extra-class"><pre><code>var event = document.createEvent(&quot;MouseEvents&quot;);
+
+event.initMouseEvent(..)
+
+btn.dispatchEvent(event);
+</code></pre></div><p>变动事件和HTML事件较少用到</p> <h1 id="表单"><a href="#表单" class="header-anchor">#</a> 表单</h1> <p>submit 存在时，有焦点按回车会提交，想在此之前先做判断再提交可以<code>preventDefault</code></p> <h2 id="文本选择-range"><a href="#文本选择-range" class="header-anchor">#</a> 文本选择 Range.</h2> <p>具体样例见diigo调研</p> <h2 id="过滤输入"><a href="#过滤输入" class="header-anchor">#</a> 过滤输入</h2> <p>检测keypress过滤后preventDefault</p> <p>一些浏览器非字符键也会触发[编码为0 or 8]，故还要判断是否charCode &gt;=9</p> <p>还要考虑Ctrl+C 等的组合键 ，确保不屏蔽Ctrl键</p> <h2 id="剪切板"><a href="#剪切板" class="header-anchor">#</a> 剪切板</h2> <p>操作剪切板的几个方法能在复制、剪切、粘贴 前/时 调用</p> <p>访问剪切板数据 通过clipboardDta.getData()</p> <h2 id="h5约束验证"><a href="#h5约束验证" class="header-anchor">#</a> H5约束验证</h2> <div class="language- extra-class"><pre><code>formnovalidate = true :禁用验证
+</code></pre></div><p>输入模式 pattern 不能阻止用户输入无效文本</p> <p>配合 checkValidity检测有效性方法来处理 or validity告诉你为什么有效或者无效</p> <h2 id="选择框脚本"><a href="#选择框脚本" class="header-anchor">#</a> 选择框脚本</h2> <h2 id="富文本"><a href="#富文本" class="header-anchor">#</a> 富文本</h2> <p>略 用的时候再看。</p> <h1 id="canvas"><a href="#canvas" class="header-anchor">#</a> Canvas</h1> <h2 id="上下文context"><a href="#上下文context" class="header-anchor">#</a> 上下文Context</h2> <div class="language- extra-class"><pre><code>var drawing=document.getElementById(&quot;test&quot;);
+		if(drawing.getContext){
+			var context=drawing.getContext(&quot;2d&quot;);
+			context.fillStyle=&quot;#ff0000&quot;;
+			context.fillRect(10,10,20,20); 点(10,10)开始的边长为20 的红色矩形
+			
+		}
+</code></pre></div><p>strokeStyle =color 描边颜色 矩形可以直接指定，路径需要在绘制完成后再调用stroke方法</p> <p>fillStyle 填充 矩形可以直接指定，路径需要在绘制完成后再调用fill方法</p> <p>closePath 将路径的起点终点用直线连接起来</p> <p>蓝边红底半圆效果</p> <div class="language- extra-class"><pre><code>			context.strokeStyle=&quot;blue&quot;;
+			context.fillStyle=&quot;red&quot;;
+			context.beginPath();
+			context.arc(100,100,99,0,Math.PI,false);
+			context.closePath();
+			context.stroke();
+			context.fill();
+</code></pre></div><p><strong>注</strong>：要画另外一条路径，先moveTo到新路径起点，否则将与前面的连起来，路径起点还是原路径的起点</p> <p>要绘制路径要先调用 beginPath()方法：作为一种标识，closePath/stroke/fill等方法调用时只处理两者之间的代码</p> <p>如这样只会绘制内圆</p> <div class="language- extra-class"><pre><code>			context.beginPath();
+			context.arc(100,100,99,0,2*Math.PI,false);
+			
+			context.beginPath();
+			context.arc(100,100,60,0,2*Math.PI,false);
+			context.stroke();
+</code></pre></div><p>简单的说 两者之间的代码只是作为状态的设置，最后才会绘制.</p> <p>###文本绘制</p> <p>比较简单 参看API</p> <h3 id="变换"><a href="#变换" class="header-anchor">#</a> 变换</h3> <p>参见API，可以做个时钟动画来学习下。</p> <p>save restore 栈结构用于保存和恢复fillStyle和strokeStyle属性</p> <h3 id="绘制图像"><a href="#绘制图像" class="header-anchor">#</a> 绘制图像</h3> <p>context.drawImage(<img>元素/<canvas>元素,起点x,起点y,绘制图像宽，绘制图像高)</canvas></p> <p>canvas.toDataURL 输出canvas结果</p> <h3 id="阴影"><a href="#阴影" class="header-anchor">#</a> 阴影</h3> <h3 id="渐变"><a href="#渐变" class="header-anchor">#</a> 渐变</h3> <h3 id="模式"><a href="#模式" class="header-anchor">#</a> 模式</h3> <p>同 background-repeat</p> <h3 id="使用图像数据"><a href="#使用图像数据" class="header-anchor">#</a> 使用图像数据</h3> <p>imageData=context.getImageData(起点坐标 宽高) 去获取原始图像数据</p> <p>data=imageData.data</p> <p>image.data=修改后的data</p> <p>利用 context.putImageData(imageData,0,0)回写图像数据并显示</p> <p>注意  要做上面处理的时候 context.drawImage时传入的image不能是其他域的</p> <h3 id="合成"><a href="#合成" class="header-anchor">#</a> 合成</h3> <p>两个图像重叠时以什么效果去做，与android用法相似</p> <h2 id="webgl"><a href="#webgl" class="header-anchor">#</a> WebGL</h2> <p>Canvas的3d上下文 与es2用法类似，需要用的时候再去看看。做个demo啥的</p> <h1 id="h5脚本编程"><a href="#h5脚本编程" class="header-anchor">#</a> H5脚本编程</h1> <h2 id="跨文档消息传递"><a href="#跨文档消息传递" class="header-anchor">#</a> 跨文档消息传递</h2> <p>向当前页面的<code>&lt;iframe&gt;</code>传递数据 <code>postMessage(消息,域)</code></p> <h2 id="拖放-重点"><a href="#拖放-重点" class="header-anchor">#</a> 拖放(重点)</h2> <p>做一个类似qq邮箱的可拖放图片并显示的效果来掌握</p> <h2 id="媒体元素"><a href="#媒体元素" class="header-anchor">#</a> 媒体元素</h2> <p>video audio</p> <p>api齐全 用时看下</p> <p>想知道是否支持编解码器</p> <p>利用</p> <div class="language- extra-class"><pre><code>if(audio.canPlayType(&quot;audio/mpeg&quot;)){
+	
+}
+</code></pre></div><p>返回值 maybe / probably 表示true</p> <p>空字符串表示false</p> <h2 id="历史状态管理"><a href="#历史状态管理" class="header-anchor">#</a> 历史状态管理</h2> <blockquote><p>pushState(&quot;初始化页面所需信息&quot;,&quot;新标题，目前无浏览器实现&quot;,&quot;相对URL&quot;)</p></blockquote> <p>创建新的历史状态 按后退会促发popState，其事件有一个state属性(当初pushState传入的第一个参数)</p> <div class="language- extra-class"><pre><code>var state = event.state;
+if(state){//第一个页面加载时state为null
+	processState(state);//把页面重置为状态对象中的数据表示的状态,自己实现
+} 
+</code></pre></div><blockquote><p>replaceState(&quot;初始化页面所需信息&quot;,&quot;新标题&quot;)</p></blockquote> <p>不会创建新状态 只会更新当前状态</p> <h1 id="error-and-debug"><a href="#error-and-debug" class="header-anchor">#</a> error and debug</h1> <h2 id="错误处理"><a href="#错误处理" class="header-anchor">#</a> 错误处理</h2> <div class="language- extra-class"><pre><code>try{
+	return 1;
+}catch(error){
+	alert(error.message)
+}finally{
+	return 0
+}
+</code></pre></div><p>最终<code>return 0;</code></p> <p><code>throw + 任意类型</code> 抛出自定义错误</p> <p>代码会立即停止运行，除非被catch到</p> <p>若错误未被处理(catch)，会触发window对象的error事件</p> <div class="language- extra-class"><pre><code>window.onerror = function(message,url,line){
+	alert(message);
+	return false;//false 阻止浏览器报告错误的默认行为
+}
+</code></pre></div><p>一般不使用它而是在代码中去catch</p> <p><strong>常见错误：</strong></p> <p>1.流控制语句使用非布尔值去判断</p> <div class="language- extra-class"><pre><code>要求：str值非空就可以继续处理
+
+if(str){
+	console.log(&quot;继续处理&quot;);
+}
+
+然而当str=0 的时候也不会处理
+if(str!=null) {
+	console.log(&quot;str非null&quot;);
+}
+</code></pre></div><p>2.判断是否为数组应该  用 <code>values instanceof Array</code></p> <p>而不是用特性执行检测，如判断 <code>typeof values.sort == &quot;function&quot;</code></p> <p>3.通信错误</p> <p>未进行URI编码  发送给服务器之前 数据需要先进行encodeURLComponent</p> <p>将js错误回写服务器</p> <div class="language- extra-class"><pre><code>//sev:严重程度 msg:错误消息
+function logError(sev,msg){
+	var img=new Image();
+	img.src=&quot;log.php?sev=&quot;+encodeURIComponent(sev)+&quot;&amp;msg=&quot;+encodeURLCompoent(msg);
+}
+
+
+所有浏览器支持image对象
+可避免跨域
+独立，不同于第三方ajax包装库可能出问题
+</code></pre></div><h2 id="调试技术"><a href="#调试技术" class="header-anchor">#</a> 调试技术</h2> <p>没有一种跨浏览器的调试机制，需要封装成如下</p> <div class="language- extra-class"><pre><code>function log(msg){
+	if(typeof console == &quot;object&quot;){
+		console.log(message); //主流版本
+	}else if(typeof opera == &quot;object&quot;){
+		opera.postError(message);//opera 10.5前版本可用此方法输出任何信息
+	}else if(typeof java == &quot;object&quot; &amp;&amp; typeof java.lang == &quot;object&quot;){
+		java.lang.System.out.println(message);
+	}
+}
+</code></pre></div><h3 id="抛出错误"><a href="#抛出错误" class="header-anchor">#</a> 抛出错误</h3> <div class="language- extra-class"><pre><code>throw new Error(msg)
+
+assert(true条件，条件为false要抛出的错误msg)
+</code></pre></div><h1 id="js-xml"><a href="#js-xml" class="header-anchor">#</a> JS &amp; XML</h1> <p>XPath XSLT E4X</p> <p>略  使用时看文档</p> <h1 id="json"><a href="#json" class="header-anchor">#</a> JSON</h1> <h2 id="stringify"><a href="#stringify" class="header-anchor">#</a> stringify</h2> <p>js对象转json字符串 默认不包括空格和缩进，函数 原型成员 undefined都被忽略</p> <p>有两个额外参数：</p> <blockquote><p>1.过滤器(数组or函数)，结果只包含数组中的属性，或者根据函数的key value返回自定义的值
+2.保留缩进，传入一个数值or字符串：数值表示每个级别 缩进的空格数 最大数值为10；字符串将代替空格，最大字符串长度为10</p></blockquote> <p>有时stringify不能满足需求的时候，可以通过对象上调用toJSON方法
+<code>toJSON()</code>:若存在该方法且能得到有效的值，则</p> <p><code>parse</code>: json字符串转js对象</p> <p>有一个额外参数：</p> <p>是一个还原函数(key,value)，若还原函数返回undefined,则返回的js对象中不包括该键值</p> <p>可以基于键返回新的值，如属性中value含有的非常规值而是对象的时候就可通过此法返回对象</p> <h1 id="ajax-跨域"><a href="#ajax-跨域" class="header-anchor">#</a> AJAX &amp; 跨域</h1> <h2 id="用法-xhr-1级"><a href="#用法-xhr-1级" class="header-anchor">#</a> 用法 XHR-1级</h2> <p>IE7之前XHR需要用ActiveX</p> <p>XHR 只能向同域中使用同端口和同协议的的URL发送请求</p> <div class="language- extra-class"><pre><code>var xhr = new XMLHTTPRequest(); //IE7以下需要用ActiveXObject 见pdf
+xhr.open(&quot;get&quot;/&quot;post&quot;,url,true/false);//待发送请求 true异步
+
+xhr.setRequestHeader(&quot;ZJXHeader&quot;,&quot;TEST&quot;);//设置自定义请求头部信息，代码需放两个方法之间
+
+xhr.send(&quot;search=abc&amp;key=2&quot; or null);//发null不是必须只是为了兼容某些浏览器需要参数
+
+xhr.getResponseHeader(&quot;ZJXHeader&quot;);//可以取得相对应的响应信息
+</code></pre></div><p><strong>同步</strong>：</p> <p>responseText：响应文本，无论是什么类型</p> <p>responseXML: 若响应内容类型是<code>“text/xml”</code>or<code>application/xml</code> 返回XML DOM文档，否则为null</p> <p>status: 响应的HTTP状态</p> <p>statusText: HTTP状态说明，一般不用</p> <p><strong>异步</strong>：</p> <div class="language- extra-class"><pre><code>xhr.onreadystatechange = function(){
+
+	if(xhr.readyState==4){
+		//接受到全部数据
+		//根据xhr.status来判断此次请求是否成功
+	}else{
+		//3:接受到部分数据
+		//2:已经调用send方法，但未接受到响应
+		//1:已经调用open方法，尚未调用send方法
+		//0:尚未调用open方法
+	}
+}
+
+
+xhr.abort()取消异步请求
+</code></pre></div><h2 id="xhr2级规范"><a href="#xhr2级规范" class="header-anchor">#</a> XHR2级规范</h2> <p><strong>1.FormData</strong></p> <p>表单的序列号，存k-v对，所有浏览器都有实现</p> <div class="language- extra-class"><pre><code>var data = new FormData(form);
+
+xhr.send(data)
+</code></pre></div><p><strong>2.超时设定</strong></p> <div class="language- extra-class"><pre><code>xhr.timeout = 1000;//仅适用于ie8+
+</code></pre></div><p><strong>3.overrideMimeType()方法</strong></p> <p>重写MIME类型</p> <p>如服务器返回的是<code>text/plain</code>但实际数据是XML</p> <p>responseXML 值为null 此时可以调用该方法</p> <p>该方法需要在send之前调用</p> <p>主流浏览器都支持</p> <h2 id="进度事件"><a href="#进度事件" class="header-anchor">#</a> 进度事件</h2> <p>以<code>loadstart</code>开始，中间若干<code>progress</code>，然后触发<code>abort/error/load</code>中的一个，最后以<code>loadend</code>结尾。</p> <p><code>abort</code>:调用abort()方法而终止</p> <p><code>load</code>:接收到完整响应</p> <p><code>error</code>:请求发送错误</p> <p><code>progress</code>：function(event){} event中包含进度信息是否可用(lengthComputable)，已接收字节数(position)和Content-Length响应头确定的预期字节数(totalSize)</p> <h2 id="跨源资源共享cors"><a href="#跨源资源共享cors" class="header-anchor">#</a> 跨源资源共享CORS</h2> <p>//XHR的一个限制就是跨域安全策略
+//
+//在请求中添加一个额外的Origin头部
+//
+//eq:
+//
+//	Origin： http://www.gahing.tech
+//
+//服务器会在<code>Access-Control-Allow-Origin</code>回发相同的源信息
+// eq:
+//
+//	Access-Control-Allow-Origin: http://www.gahing.tech
+//</p> <h2 id="其他跨域技术"><a href="#其他跨域技术" class="header-anchor">#</a> 其他跨域技术</h2> <h3 id="_1-图像ping"><a href="#_1-图像ping" class="header-anchor">#</a> 1.图像Ping</h3> <p>之前有提到过，<code>img.src=&quot;http://xxx.com?search=abc&quot;;</code> 即可发起调用。</p> <p>常用于跟踪用户点击页面行为 及广告曝光次数</p> <p>缺点：只能发Get请求，不能获得响应文本</p> <h3 id="_2-jsonp"><a href="#_2-jsonp" class="header-anchor">#</a> 2.JSONP</h3> <p>...............</p> <h1 id="离线存储"><a href="#离线存储" class="header-anchor">#</a> 离线存储</h1> <p>见Diigo技术调研一文</p> <h1 id="最佳实践"><a href="#最佳实践" class="header-anchor">#</a> 最佳实践</h1> <h2 id="可维护"><a href="#可维护" class="header-anchor">#</a> 可维护</h2> <p>CSS 与 JS 的解耦合：</p> <p>修改元素的css类(需要创建更多类) 而不是修改css类中的属性，看情况采取该法。</p> <p>应用逻辑和事件处理的解耦：</p> <p>勿将event对象传给其他方法，只传event对象的部分值</p> <p>避免全局量，多个全局量可以用一个单一的全局量对象去封装</p> <p>然后其他的命名空间在该对象上创建.一般项目每个人维护自己的命名空间</p> <p>js中的if判断，一般是让其与应该值比，而不是与不符值比，</p> <p>如判断 一个对象是不是数组，不能判断<code>if(value!=null)</code>而是判断<code>if(value instanceof Array)</code></p> <h2 id="性能"><a href="#性能" class="header-anchor">#</a> 性能</h2> <p>###1.作用域</p> <p>1.全局变量多次引用应该用一个局部变量代替</p> <p>2.避免with</p> <p>###2.避免双重解释</p> <p>如<code>setTimeout(&quot;alert('Hello world')&quot;,500)</code></p> <p>###3.最小化语句数</p> <p>1.多变量声明</p> <div class="language- extra-class"><pre><code>var a=5;
+var b=&quot;blue&quot;;
+var c=[1,2,3];
+</code></pre></div><p>应该改为</p> <div class="language- extra-class"><pre><code>var a=5,b=&quot;blue&quot;,c=[1,2,3];
+</code></pre></div><p>2.使用数组和对象字面量</p> <div class="language- extra-class"><pre><code>var person=new Object();
+person.name=&quot;gahing&quot;;
+person.age=14;
+</code></pre></div><p>改为</p> <div class="language- extra-class"><pre><code>var person={
+	name:&quot;gahing&quot;,
+	age:14;
+};
+</code></pre></div><p>语句从3条变为1条</p> <h3 id="_4-优化dom交互"><a href="#_4-优化dom交互" class="header-anchor">#</a> 4.优化DOM交互</h3> <p>1.使用fragment</p> <p><code>var fragment=document.createDocumentFragment()</code></p> <p>先将item添加到fragment</p> <p>最后fragment被添加<code>list.appendChild(fragment)</code></p> <p>代替每次直接<code>list.appendChild(item);</code></p> <p>2.大DOM修改采取innerHTML</p> <p>3.使用事件代理，前面事件一章已提到</p> <h2 id="部署"><a href="#部署" class="header-anchor">#</a> 部署</h2> <p>压缩 调试 构建工具的选择</p> <h1 id="新兴的api"><a href="#新兴的api" class="header-anchor">#</a> 新兴的API</h1></body></div></div>  <div class="page-edit"><div class="edit-link"><a href="https://github.com/francecil/blog/edit/master/docs/01.大前端/01.前端基础/编程语言/JavaScript/_LearningJS.md" target="_blank" rel="noopener noreferrer">编辑</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2023/04/16, 18:50:16</span></div></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/a198a9/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">JS技巧</div></a> <a href="/pages/25c3a4/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">async 函数编译原理</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/a198a9/" class="prev">JS技巧</a></span> <span class="next"><a href="/pages/25c3a4/">async 函数编译原理</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/57474a/"><div>
+            如何部署博客
+            <!----></div></a> <span class="date">04-15</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/195887/"><div>
+            给网站添加一只看板娘
+            <!----></div></a> <span class="date">04-15</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/094eb3/"><div>
+            博客评论踩坑记录
+            <!----></div></a> <span class="date">04-14</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:396324491@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/francecil" title="GitHub" target="_blank" class="iconfont icon-github"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2016-2023
+    <span>Gahing | <a href="http://www.beian.gov.cn" target="__blank">闽ICP备19024221号-1</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <div class="body-bg" style="background:url() center center / cover no-repeat;opacity:0.5;"></div> <!----> <!----></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.dc012a4b.js" defer></script><script src="/assets/js/2.237b9688.js" defer></script><script src="/assets/js/3.e227eb2c.js" defer></script><script src="/assets/js/61.74b69b3c.js" defer></script>
+  </body>
+</html>

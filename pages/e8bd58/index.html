@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Java IO | Gahing&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="/img/favicon.ico">
+    <meta name="description" content="前端技术博客。包括大前端、服务端、通用技术">
+    <meta name="keywords" content="前端博客">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#d1fbf9e6">
+    
+    <link rel="preload" href="/assets/css/0.styles.4de15886.css" as="style"><link rel="preload" href="/assets/js/app.dc012a4b.js" as="script"><link rel="preload" href="/assets/js/2.237b9688.js" as="script"><link rel="preload" href="/assets/js/3.e227eb2c.js" as="script"><link rel="preload" href="/assets/js/200.8b614718.js" as="script"><link rel="prefetch" href="/assets/js/10.e5746dd5.js"><link rel="prefetch" href="/assets/js/100.0f558d19.js"><link rel="prefetch" href="/assets/js/101.3d6ab2b5.js"><link rel="prefetch" href="/assets/js/102.f374cd4e.js"><link rel="prefetch" href="/assets/js/103.8edf3d74.js"><link rel="prefetch" href="/assets/js/104.3fd35bed.js"><link rel="prefetch" href="/assets/js/105.0c3cdb23.js"><link rel="prefetch" href="/assets/js/106.b43d76fb.js"><link rel="prefetch" href="/assets/js/107.ab446448.js"><link rel="prefetch" href="/assets/js/108.1e66aff0.js"><link rel="prefetch" href="/assets/js/109.29f5ba3b.js"><link rel="prefetch" href="/assets/js/11.5d831a2b.js"><link rel="prefetch" href="/assets/js/110.1f1003c6.js"><link rel="prefetch" href="/assets/js/111.6c387b9b.js"><link rel="prefetch" href="/assets/js/112.fed4e0b5.js"><link rel="prefetch" href="/assets/js/113.643298e8.js"><link rel="prefetch" href="/assets/js/114.f492f40b.js"><link rel="prefetch" href="/assets/js/115.92d42426.js"><link rel="prefetch" href="/assets/js/116.f7579aab.js"><link rel="prefetch" href="/assets/js/117.06b9b698.js"><link rel="prefetch" href="/assets/js/118.89aade73.js"><link rel="prefetch" href="/assets/js/119.084bc685.js"><link rel="prefetch" href="/assets/js/12.2758cfcd.js"><link rel="prefetch" href="/assets/js/120.9e16d5d5.js"><link rel="prefetch" href="/assets/js/121.ae36917d.js"><link rel="prefetch" href="/assets/js/122.c0300285.js"><link rel="prefetch" href="/assets/js/123.ba57a285.js"><link rel="prefetch" href="/assets/js/124.a2c35a42.js"><link rel="prefetch" href="/assets/js/125.9ef9b92f.js"><link rel="prefetch" href="/assets/js/126.72df36ee.js"><link rel="prefetch" href="/assets/js/127.a78a8428.js"><link rel="prefetch" href="/assets/js/128.396bea7d.js"><link rel="prefetch" href="/assets/js/129.152a65b7.js"><link rel="prefetch" href="/assets/js/13.ff9e0172.js"><link rel="prefetch" href="/assets/js/130.f0504de5.js"><link rel="prefetch" href="/assets/js/131.65c1867e.js"><link rel="prefetch" href="/assets/js/132.cbe1d2a0.js"><link rel="prefetch" href="/assets/js/133.fff83a02.js"><link rel="prefetch" href="/assets/js/134.1571f070.js"><link rel="prefetch" href="/assets/js/135.b48e0076.js"><link rel="prefetch" href="/assets/js/136.d824ef94.js"><link rel="prefetch" href="/assets/js/137.b05e49f9.js"><link rel="prefetch" href="/assets/js/138.7179323e.js"><link rel="prefetch" href="/assets/js/139.740a76b3.js"><link rel="prefetch" href="/assets/js/14.47b6e91e.js"><link rel="prefetch" href="/assets/js/140.d2e54a22.js"><link rel="prefetch" href="/assets/js/141.f536a47d.js"><link rel="prefetch" href="/assets/js/142.15b9c9f8.js"><link rel="prefetch" href="/assets/js/143.fc6a39f7.js"><link rel="prefetch" href="/assets/js/144.66973e1f.js"><link rel="prefetch" href="/assets/js/145.8944c2d3.js"><link rel="prefetch" href="/assets/js/146.88ae2046.js"><link rel="prefetch" href="/assets/js/147.67fcdace.js"><link rel="prefetch" href="/assets/js/148.9b77ac49.js"><link rel="prefetch" href="/assets/js/149.225f2284.js"><link rel="prefetch" href="/assets/js/15.de4d417d.js"><link rel="prefetch" href="/assets/js/150.1521f10e.js"><link rel="prefetch" href="/assets/js/151.92e0b348.js"><link rel="prefetch" href="/assets/js/152.f8a707a9.js"><link rel="prefetch" href="/assets/js/153.ea6e9dfe.js"><link rel="prefetch" href="/assets/js/154.84618cdd.js"><link rel="prefetch" href="/assets/js/155.16807248.js"><link rel="prefetch" href="/assets/js/156.05a44730.js"><link rel="prefetch" href="/assets/js/157.43093a70.js"><link rel="prefetch" href="/assets/js/158.a38a487d.js"><link rel="prefetch" href="/assets/js/159.24a99e5c.js"><link rel="prefetch" href="/assets/js/16.eb482e96.js"><link rel="prefetch" href="/assets/js/160.beaee1e9.js"><link rel="prefetch" href="/assets/js/161.ce337bca.js"><link rel="prefetch" href="/assets/js/162.a2e49d2a.js"><link rel="prefetch" href="/assets/js/163.0e067693.js"><link rel="prefetch" href="/assets/js/164.7445d016.js"><link rel="prefetch" href="/assets/js/165.9d03d9bb.js"><link rel="prefetch" href="/assets/js/166.e29f42cd.js"><link rel="prefetch" href="/assets/js/167.b60380cb.js"><link rel="prefetch" href="/assets/js/168.f3b438b9.js"><link rel="prefetch" href="/assets/js/169.3dd8553b.js"><link rel="prefetch" href="/assets/js/17.53baab98.js"><link rel="prefetch" href="/assets/js/170.9690f7e1.js"><link rel="prefetch" href="/assets/js/171.53ea0955.js"><link rel="prefetch" href="/assets/js/172.d6969381.js"><link rel="prefetch" href="/assets/js/173.a9691cb5.js"><link rel="prefetch" href="/assets/js/174.7193377b.js"><link rel="prefetch" href="/assets/js/175.59039d27.js"><link rel="prefetch" href="/assets/js/176.dfc3a0c5.js"><link rel="prefetch" href="/assets/js/177.d484a8bb.js"><link rel="prefetch" href="/assets/js/178.4a4f64eb.js"><link rel="prefetch" href="/assets/js/179.f9e74cf5.js"><link rel="prefetch" href="/assets/js/18.ec0650b1.js"><link rel="prefetch" href="/assets/js/180.ee54ee12.js"><link rel="prefetch" href="/assets/js/181.38461506.js"><link rel="prefetch" href="/assets/js/182.5bf37518.js"><link rel="prefetch" href="/assets/js/183.0859458b.js"><link rel="prefetch" href="/assets/js/184.92bdef22.js"><link rel="prefetch" href="/assets/js/185.b69845fc.js"><link rel="prefetch" href="/assets/js/186.39cd29ce.js"><link rel="prefetch" href="/assets/js/187.27923269.js"><link rel="prefetch" href="/assets/js/188.b355eefc.js"><link rel="prefetch" href="/assets/js/189.5c8dc591.js"><link rel="prefetch" href="/assets/js/19.c37147e3.js"><link rel="prefetch" href="/assets/js/190.7a339ff8.js"><link rel="prefetch" href="/assets/js/191.c0b7f120.js"><link rel="prefetch" href="/assets/js/192.c31def96.js"><link rel="prefetch" href="/assets/js/193.62edf818.js"><link rel="prefetch" href="/assets/js/194.427073f0.js"><link rel="prefetch" href="/assets/js/195.c20db2dc.js"><link rel="prefetch" href="/assets/js/196.02241c30.js"><link rel="prefetch" href="/assets/js/197.f1c9ff7b.js"><link rel="prefetch" href="/assets/js/198.07c77644.js"><link rel="prefetch" href="/assets/js/199.5ac7415c.js"><link rel="prefetch" href="/assets/js/20.fd9ab357.js"><link rel="prefetch" href="/assets/js/201.c800452f.js"><link rel="prefetch" href="/assets/js/202.88d5a460.js"><link rel="prefetch" href="/assets/js/203.65e017ee.js"><link rel="prefetch" href="/assets/js/204.fc322b36.js"><link rel="prefetch" href="/assets/js/205.868e69bd.js"><link rel="prefetch" href="/assets/js/206.e84493bb.js"><link rel="prefetch" href="/assets/js/207.aca96922.js"><link rel="prefetch" href="/assets/js/208.d75f5ed8.js"><link rel="prefetch" href="/assets/js/209.65df91d3.js"><link rel="prefetch" href="/assets/js/21.40872b30.js"><link rel="prefetch" href="/assets/js/210.4da4bb8b.js"><link rel="prefetch" href="/assets/js/211.ed751481.js"><link rel="prefetch" href="/assets/js/212.9be8d6dc.js"><link rel="prefetch" href="/assets/js/213.4a14ea6c.js"><link rel="prefetch" href="/assets/js/214.1c4186c9.js"><link rel="prefetch" href="/assets/js/215.f8d488e4.js"><link rel="prefetch" href="/assets/js/216.f5b64f4f.js"><link rel="prefetch" href="/assets/js/217.73647d39.js"><link rel="prefetch" href="/assets/js/218.6a70973d.js"><link rel="prefetch" href="/assets/js/219.22423a2b.js"><link rel="prefetch" href="/assets/js/22.8c999c5e.js"><link rel="prefetch" href="/assets/js/220.c152a314.js"><link rel="prefetch" href="/assets/js/221.5f700c7b.js"><link rel="prefetch" href="/assets/js/222.1d95f104.js"><link rel="prefetch" href="/assets/js/223.9b401552.js"><link rel="prefetch" href="/assets/js/224.25763513.js"><link rel="prefetch" href="/assets/js/225.6c562277.js"><link rel="prefetch" href="/assets/js/226.e78fcda7.js"><link rel="prefetch" href="/assets/js/227.0336e64b.js"><link rel="prefetch" href="/assets/js/228.24bdab6b.js"><link rel="prefetch" href="/assets/js/229.19ed8acb.js"><link rel="prefetch" href="/assets/js/23.4d7a37a0.js"><link rel="prefetch" href="/assets/js/230.62331ea2.js"><link rel="prefetch" href="/assets/js/231.aa8cf7f9.js"><link rel="prefetch" href="/assets/js/232.23288a0d.js"><link rel="prefetch" href="/assets/js/233.ab8743fa.js"><link rel="prefetch" href="/assets/js/234.719c5793.js"><link rel="prefetch" href="/assets/js/235.b33ab4d6.js"><link rel="prefetch" href="/assets/js/236.e85796c6.js"><link rel="prefetch" href="/assets/js/237.fc77cddd.js"><link rel="prefetch" href="/assets/js/238.6a21a734.js"><link rel="prefetch" href="/assets/js/239.2802920f.js"><link rel="prefetch" href="/assets/js/24.595704ee.js"><link rel="prefetch" href="/assets/js/240.9d605a58.js"><link rel="prefetch" href="/assets/js/241.d5fea69d.js"><link rel="prefetch" href="/assets/js/242.43a19830.js"><link rel="prefetch" href="/assets/js/243.c9bfb5c3.js"><link rel="prefetch" href="/assets/js/244.7170e9aa.js"><link rel="prefetch" href="/assets/js/245.dd156560.js"><link rel="prefetch" href="/assets/js/246.080c0bb9.js"><link rel="prefetch" href="/assets/js/247.a21ea712.js"><link rel="prefetch" href="/assets/js/248.305863cb.js"><link rel="prefetch" href="/assets/js/249.475710b8.js"><link rel="prefetch" href="/assets/js/25.82ca7d00.js"><link rel="prefetch" href="/assets/js/250.b6c895f6.js"><link rel="prefetch" href="/assets/js/251.e2dd8272.js"><link rel="prefetch" href="/assets/js/252.4c665dbf.js"><link rel="prefetch" href="/assets/js/253.dcc6e21d.js"><link rel="prefetch" href="/assets/js/254.efb33612.js"><link rel="prefetch" href="/assets/js/255.47339fef.js"><link rel="prefetch" href="/assets/js/256.d1e2a1a3.js"><link rel="prefetch" href="/assets/js/257.11bd9c74.js"><link rel="prefetch" href="/assets/js/258.40a49b56.js"><link rel="prefetch" href="/assets/js/259.d9bd0598.js"><link rel="prefetch" href="/assets/js/26.c3018116.js"><link rel="prefetch" href="/assets/js/260.afddb7f5.js"><link rel="prefetch" href="/assets/js/261.5869630e.js"><link rel="prefetch" href="/assets/js/262.0b523312.js"><link rel="prefetch" href="/assets/js/263.856d1c19.js"><link rel="prefetch" href="/assets/js/264.8e10f018.js"><link rel="prefetch" href="/assets/js/265.d305f3d5.js"><link rel="prefetch" href="/assets/js/266.454a9e04.js"><link rel="prefetch" href="/assets/js/267.3c5ad27b.js"><link rel="prefetch" href="/assets/js/268.9910d484.js"><link rel="prefetch" href="/assets/js/269.48526743.js"><link rel="prefetch" href="/assets/js/27.b2432bb1.js"><link rel="prefetch" href="/assets/js/270.b0741c3b.js"><link rel="prefetch" href="/assets/js/271.e84156eb.js"><link rel="prefetch" href="/assets/js/272.9208c9a1.js"><link rel="prefetch" href="/assets/js/273.ef01f63f.js"><link rel="prefetch" href="/assets/js/274.26dc1593.js"><link rel="prefetch" href="/assets/js/275.fcfc973a.js"><link rel="prefetch" href="/assets/js/276.a4f881ad.js"><link rel="prefetch" href="/assets/js/277.f6ae65b1.js"><link rel="prefetch" href="/assets/js/278.b56288ac.js"><link rel="prefetch" href="/assets/js/279.e3ec49fc.js"><link rel="prefetch" href="/assets/js/28.41e46f91.js"><link rel="prefetch" href="/assets/js/280.23c1e1ff.js"><link rel="prefetch" href="/assets/js/281.2f43d7fd.js"><link rel="prefetch" href="/assets/js/282.d3635e6b.js"><link rel="prefetch" href="/assets/js/283.50b2211e.js"><link rel="prefetch" href="/assets/js/284.b851e005.js"><link rel="prefetch" href="/assets/js/285.0c48f889.js"><link rel="prefetch" href="/assets/js/286.9be978a6.js"><link rel="prefetch" href="/assets/js/287.305e217a.js"><link rel="prefetch" href="/assets/js/288.a346a6e6.js"><link rel="prefetch" href="/assets/js/289.37f7cead.js"><link rel="prefetch" href="/assets/js/29.2c97f23c.js"><link rel="prefetch" href="/assets/js/290.f757a0b9.js"><link rel="prefetch" href="/assets/js/291.ef1f2684.js"><link rel="prefetch" href="/assets/js/292.ee7450a3.js"><link rel="prefetch" href="/assets/js/293.01f4c307.js"><link rel="prefetch" href="/assets/js/294.a951c73a.js"><link rel="prefetch" href="/assets/js/295.7a31c1a7.js"><link rel="prefetch" href="/assets/js/296.f7ed327c.js"><link rel="prefetch" href="/assets/js/297.21965ed8.js"><link rel="prefetch" href="/assets/js/298.29a7aa79.js"><link rel="prefetch" href="/assets/js/299.c55086b5.js"><link rel="prefetch" href="/assets/js/30.5ea62e7d.js"><link rel="prefetch" href="/assets/js/300.fbf44641.js"><link rel="prefetch" href="/assets/js/301.719eafbb.js"><link rel="prefetch" href="/assets/js/302.265139ea.js"><link rel="prefetch" href="/assets/js/303.0c7b7448.js"><link rel="prefetch" href="/assets/js/31.f1dae6d0.js"><link rel="prefetch" href="/assets/js/32.03ffc056.js"><link rel="prefetch" href="/assets/js/33.3b2ef099.js"><link rel="prefetch" href="/assets/js/34.45f77472.js"><link rel="prefetch" href="/assets/js/35.d548569d.js"><link rel="prefetch" href="/assets/js/36.78b9acea.js"><link rel="prefetch" href="/assets/js/37.0226035d.js"><link rel="prefetch" href="/assets/js/38.405a5547.js"><link rel="prefetch" href="/assets/js/39.d4447726.js"><link rel="prefetch" href="/assets/js/4.5fe0a195.js"><link rel="prefetch" href="/assets/js/40.cc0e03ff.js"><link rel="prefetch" href="/assets/js/41.3d317c4c.js"><link rel="prefetch" href="/assets/js/42.cc79ca8e.js"><link rel="prefetch" href="/assets/js/43.879e851b.js"><link rel="prefetch" href="/assets/js/44.8b78d8f2.js"><link rel="prefetch" href="/assets/js/45.023cb524.js"><link rel="prefetch" href="/assets/js/46.0deb2f77.js"><link rel="prefetch" href="/assets/js/47.0ce2997f.js"><link rel="prefetch" href="/assets/js/48.47efc90c.js"><link rel="prefetch" href="/assets/js/49.fe702ccd.js"><link rel="prefetch" href="/assets/js/5.21cdb028.js"><link rel="prefetch" href="/assets/js/50.9f143414.js"><link rel="prefetch" href="/assets/js/51.e4198cff.js"><link rel="prefetch" href="/assets/js/52.31ccaae4.js"><link rel="prefetch" href="/assets/js/53.ad3673a4.js"><link rel="prefetch" href="/assets/js/54.8fb4b0e2.js"><link rel="prefetch" href="/assets/js/55.43e24d37.js"><link rel="prefetch" href="/assets/js/56.133d653d.js"><link rel="prefetch" href="/assets/js/57.2dc2445b.js"><link rel="prefetch" href="/assets/js/58.0c4f88d4.js"><link rel="prefetch" href="/assets/js/59.d3808f84.js"><link rel="prefetch" href="/assets/js/6.13a5e987.js"><link rel="prefetch" href="/assets/js/60.b73dfdba.js"><link rel="prefetch" href="/assets/js/61.74b69b3c.js"><link rel="prefetch" href="/assets/js/62.0a205744.js"><link rel="prefetch" href="/assets/js/63.fc7cf400.js"><link rel="prefetch" href="/assets/js/64.72cff546.js"><link rel="prefetch" href="/assets/js/65.8d164bb9.js"><link rel="prefetch" href="/assets/js/66.e2154c1b.js"><link rel="prefetch" href="/assets/js/67.49ae84a2.js"><link rel="prefetch" href="/assets/js/68.ab4dd60b.js"><link rel="prefetch" href="/assets/js/69.a02967b0.js"><link rel="prefetch" href="/assets/js/7.ceba6ae1.js"><link rel="prefetch" href="/assets/js/70.aeee1623.js"><link rel="prefetch" href="/assets/js/71.9773ff05.js"><link rel="prefetch" href="/assets/js/72.144d5e48.js"><link rel="prefetch" href="/assets/js/73.40b657e8.js"><link rel="prefetch" href="/assets/js/74.f9ee6cda.js"><link rel="prefetch" href="/assets/js/75.abe8de16.js"><link rel="prefetch" href="/assets/js/76.5ddbb0fb.js"><link rel="prefetch" href="/assets/js/77.d33e036a.js"><link rel="prefetch" href="/assets/js/78.021dc205.js"><link rel="prefetch" href="/assets/js/79.4b9eb768.js"><link rel="prefetch" href="/assets/js/8.72ed7681.js"><link rel="prefetch" href="/assets/js/80.f0fc0b90.js"><link rel="prefetch" href="/assets/js/81.4825daee.js"><link rel="prefetch" href="/assets/js/82.553619ff.js"><link rel="prefetch" href="/assets/js/83.b0ec55cb.js"><link rel="prefetch" href="/assets/js/84.05540c64.js"><link rel="prefetch" href="/assets/js/85.80efad6d.js"><link rel="prefetch" href="/assets/js/86.b396a3e8.js"><link rel="prefetch" href="/assets/js/87.84550e87.js"><link rel="prefetch" href="/assets/js/88.d674d83d.js"><link rel="prefetch" href="/assets/js/89.9c360e00.js"><link rel="prefetch" href="/assets/js/9.7bea4558.js"><link rel="prefetch" href="/assets/js/90.24f42fda.js"><link rel="prefetch" href="/assets/js/91.414b942b.js"><link rel="prefetch" href="/assets/js/92.55983f65.js"><link rel="prefetch" href="/assets/js/93.d4e8d7c2.js"><link rel="prefetch" href="/assets/js/94.5900a748.js"><link rel="prefetch" href="/assets/js/95.dece11d8.js"><link rel="prefetch" href="/assets/js/96.4e3effaf.js"><link rel="prefetch" href="/assets/js/97.aea8b066.js"><link rel="prefetch" href="/assets/js/98.54aa9bbc.js"><link rel="prefetch" href="/assets/js/99.2a71c2eb.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4de15886.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu have-body-img"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="Gahing's blog" class="logo"> <span class="site-name can-hide">Gahing's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/fe/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>前端基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/2e58d1/" class="nav-link">JavaScript</a></li><li class="dropdown-subitem"><a href="/pages/7d9673/" class="nav-link">HTML</a></li><li class="dropdown-subitem"><a href="/pages/c1c6f3/" class="nav-link">CSS</a></li><li class="dropdown-subitem"><a href="/pages/df8030/" class="nav-link">TypeScript</a></li><li class="dropdown-subitem"><a href="/pages/25ca35/" class="nav-link">WebAssembly</a></li></ul></li><li class="dropdown-item"><h4>UI 框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/b4d8a3/" class="nav-link">React</a></li><li class="dropdown-subitem"><a href="/pages/b5decb/" class="nav-link">Vue</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="服务端" class="dropdown-title"><a href="/server/" class="link-title">服务端</a> <span class="title" style="display:none;">服务端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>中间件</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/c29f00/" class="nav-link">Redis</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="通用技术" class="dropdown-title"><a href="/technology/" class="link-title">通用技术</a> <span class="title" style="display:none;">通用技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/703e88/" class="nav-link">Git</a></li><li class="dropdown-item"><!----> <a href="/pages/58bfaf/" class="nav-link">网络基础</a></li><li class="dropdown-item"><!----> <a href="/pages/eca777/" class="nav-link">算法与数据结构</a></li><li class="dropdown-item"><h4>其他技术领域</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/app/" class="nav-link">客户端</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/product/" class="nav-link">产品设计</a></li><li class="dropdown-item"><!----> <a href="/pages/c70629/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/pages/f00c67/" class="nav-link">人生总结</a></li><li class="dropdown-item"><!----> <a href="/soft-quality/" class="nav-link">软素质</a></li><li class="dropdown-item"><h4>实用技巧</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/d3622e/" class="nav-link">markdown 技巧</a></li></ul></li><li class="dropdown-item"><h4>知识科普</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/d3f796/" class="nav-link">地理坐标系</a></li></ul></li><li class="dropdown-item"><h4>收藏夹</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/f06636/" class="nav-link">网站</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/francecil/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="/img/avatar.jpeg"> <div class="blogger-info"><h3>Gahing</h3> <span>To be best</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/fe/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>前端基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/2e58d1/" class="nav-link">JavaScript</a></li><li class="dropdown-subitem"><a href="/pages/7d9673/" class="nav-link">HTML</a></li><li class="dropdown-subitem"><a href="/pages/c1c6f3/" class="nav-link">CSS</a></li><li class="dropdown-subitem"><a href="/pages/df8030/" class="nav-link">TypeScript</a></li><li class="dropdown-subitem"><a href="/pages/25ca35/" class="nav-link">WebAssembly</a></li></ul></li><li class="dropdown-item"><h4>UI 框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/b4d8a3/" class="nav-link">React</a></li><li class="dropdown-subitem"><a href="/pages/b5decb/" class="nav-link">Vue</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="服务端" class="dropdown-title"><a href="/server/" class="link-title">服务端</a> <span class="title" style="display:none;">服务端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>中间件</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/c29f00/" class="nav-link">Redis</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="通用技术" class="dropdown-title"><a href="/technology/" class="link-title">通用技术</a> <span class="title" style="display:none;">通用技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/703e88/" class="nav-link">Git</a></li><li class="dropdown-item"><!----> <a href="/pages/58bfaf/" class="nav-link">网络基础</a></li><li class="dropdown-item"><!----> <a href="/pages/eca777/" class="nav-link">算法与数据结构</a></li><li class="dropdown-item"><h4>其他技术领域</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/app/" class="nav-link">客户端</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/product/" class="nav-link">产品设计</a></li><li class="dropdown-item"><!----> <a href="/pages/c70629/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/pages/f00c67/" class="nav-link">人生总结</a></li><li class="dropdown-item"><!----> <a href="/soft-quality/" class="nav-link">软素质</a></li><li class="dropdown-item"><h4>实用技巧</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/d3622e/" class="nav-link">markdown 技巧</a></li></ul></li><li class="dropdown-item"><h4>知识科普</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/d3f796/" class="nav-link">地理坐标系</a></li></ul></li><li class="dropdown-item"><h4>收藏夹</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/f06636/" class="nav-link">网站</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/francecil/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>中间件</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>服务部署</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>编程语言</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Go</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>Java</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/7d6e79/" class="sidebar-link">Android Binder学习笔记</a></li><li><a href="/pages/d649a1/" class="sidebar-link">BigInteger源码解析</a></li><li><a href="/pages/e928eb/" class="sidebar-link">CountDownLatch使用之统计任务花费时间</a></li><li><a href="/pages/f661cb/" class="sidebar-link">Integer 源码方法学习</a></li><li><a href="/pages/52f49b/" class="sidebar-link">Java Executors 学习笔记</a></li><li><a href="/pages/e8bd58/" aria-current="page" class="active sidebar-link">Java IO</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level2"><a href="/pages/e8bd58/#java-io-file类用于表示文件-目录" class="sidebar-link">java.io.File类用于表示文件（目录）</a></li><li class="sidebar-sub-header level2"><a href="/pages/e8bd58/#randomaccessfile" class="sidebar-link">RandomAccessFile</a></li><li class="sidebar-sub-header level2"><a href="/pages/e8bd58/#字节流" class="sidebar-link">`字节流`</a></li><li class="sidebar-sub-header level2"><a href="/pages/e8bd58/#字符流" class="sidebar-link">`字符流`</a></li><li class="sidebar-sub-header level2"><a href="/pages/e8bd58/#对象的序列化-反序列化" class="sidebar-link">`对象的序列化，反序列化`</a></li></ul></li><li><a href="/pages/0a38aa/" class="sidebar-link">Java NIO</a></li><li><a href="/pages/c655ca/" class="sidebar-link">NDK-JNI开发笔记</a></li><li><a href="/pages/aef43f/" class="sidebar-link">OpenGL ES 开发笔记</a></li><li><a href="/pages/3ebd5c/" class="sidebar-link">ThreadLocal</a></li><li><a href="/pages/1dd710/" class="sidebar-link">「Java并发编程」读书笔记</a></li><li><a href="/pages/287b22/" class="sidebar-link">「垃圾收集」学习笔记</a></li><li><a href="/pages/c2c916/" class="sidebar-link">动手写一个并发缓存框架 历程</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>NodeJS</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06970110><div class="articleInfo" data-v-06970110><ul class="breadcrumbs" data-v-06970110><li data-v-06970110><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-06970110></a></li> <li data-v-06970110><a href="/server/#服务端" data-v-06970110>服务端</a></li><li data-v-06970110><a href="/server/#编程语言" data-v-06970110>编程语言</a></li><li data-v-06970110><a href="/server/#Java" data-v-06970110>Java</a></li></ul> <div class="info" data-v-06970110><div title="作者" class="author iconfont icon-touxiang" data-v-06970110><a href="https://github.com/francecil" target="_blank" title="作者" class="beLink" data-v-06970110>gahing</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-06970110><a href="javascript:;" data-v-06970110>2020-06-29</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABGpJREFUSA3tVVtoXFUU3fvOI53UlmCaKIFmwEhsE7QK0ipFEdHEKpXaZGrp15SINsXUWvBDpBgQRKi0+KKoFeJHfZA+ED9KKoIU2gYD9UejTW4rVIzm0VSTziPzuNu1z507dibTTjL4U/DAzLn3nL3X2o91ziX6f9wMFdh6Jvbm9nNSV0msViVO6tN1Rm7NMu2OpeJ9lWBUTDxrJbYTS0hInuwciu9eLHlFxCLCZEk3MegsJmZ5K/JD6t7FkFdEvGUo1g7qJoG3MHImqRIn8/nzY1K9UPKKiJmtnUqHVE3Gbuay6vJE/N2FEmuxFjW2nUuE0yQXRRxLiTUAzs36zhZvOXJPdX850EVnnLZkB8prodQoM5JGj7Xk2mvC7JB8tG04Ef5PiXtG0UtxupRQSfTnBoCy554x18yJHI6I+G5Eru4LHmPJZEQsrvPUbMiA8G/WgMK7w7I+ez7++o2ANfbrjvaOl1tFMs+htG3IrZH9/hDX1Pr8Tc0UvH8tcX29KzAgIGcEkINyW5BF9x891hw6VYqgJHEk0huccS7vh3C6gTiODL+26huuBtbct8eZnqLML8PkxGYpuPZBqtqwkSjgc4mB5gbgig5i+y0UDK35LMxXisn9xQtK+nd26gTIHsHe/oblK/b29fUmN/8Y+9jAQrnBp56m1LcDlDp9irKTExSKduXJVWSqdBMA08pEJnEIOB3FPPMybu/oeV8zFeYN3xx576Q6RH+VmplE4ncQV5v+5rzSoyOU7PuEAg8g803PwBJ0CExno/jcMbN8tONYeOmHiuUNryvm3fRUy4tMPVLdAGkUhNWuggGrJcXPv+ouCjz0MKUHz1J2/E8IC9nqTabcxgaBYM0hPhD5Y65FsbxRQKxCQrDjDctW7PUM3HuZunFyifSAqEfuzCp48Il24luWUWZoyJCaPR82jE0+kFA643wRFVni4RYSq3ohJO2pZ7B5dO4xkDWbEpossJPLSrPjYID8rS2UHTlvyNxqIGsg674XJJ7vnh5L7PNwC4hh2sjCI96mzszOTpxLF0T7l88Yz7lAuK6OnL8gXLOnTvpzSb22YG8W7us3jSebFHeeqnXRG1vt+MoUM84LQIBmMsCTAcOauTh0T0l0neQK7m2bLMt2mGxU3HYssS0J2cdv5wljlPsrIuZLAG/2DOZIXgCYT8uMGZN+e2kSirfxZOPCsC0f24nTZzspnVn9VePS1Z5vubmAGGXG8ZFno9Hel0yfA5ZPhF7Dh972BQJ2qCpgH67lmWtBYbvk6sz02wjky2vXyz0XErP/kFB619js1BtwfOV4OPRqOQBjy3Qbk18vigUPPSD5ceHnwck7W9bhAqZdd7SuG7w4/P2F/GaJh8c7e9qgow+Q7cGBo+98WsLkuktFqiZabtXuQTu/Y5ETbR0v7tNSFnvrmu6pjdoan2KjMu8q/Hmj1EfCO2ZGfEIbIXKUlw8qaX9/b2oeSJmFksSeT/Fn0V3nSypChh4Gjh74ybO9aeZ/AN2dwciu2/MhAAAAAElFTkSuQmCC">Java IO<span class="title-tag">草稿</span></h1>  <div class="theme-vdoing-content content__default"><h1 id="java-io"><a href="#java-io" class="header-anchor">#</a> Java IO</h1> <h2 id="java-io-file类用于表示文件-目录"><a href="#java-io-file类用于表示文件-目录" class="header-anchor">#</a> <code>java.io.File</code>类用于表示文件（目录）</h2> <p>File类只用于表示文件（目录）的信息（名称、大小等），不能用于文件内容的访问</p> <div class="language- extra-class"><pre><code>File file = new File(&quot;F:\\临时文档\\958032738&quot;);//填入相对或绝对地址
+//判断文件(夹)是否存在
+if(!file.exists())
+	file.mkdir(); //创建文件夹
+else
+	file.delete();//删除文件夹
+//是否是一个目录  如果是目录返回true,如果不是目录or目录不存在返回的是false
+System.out.println(file.isDirectory());
+//是否是一个文件 如果是文件返回true,如果不是文件or文件不存在返回的是false
+System.out.println(file.isFile());
+//new file 的构造方式
+File file2 = new File(&quot;e:\\javaio\\日记1.txt&quot;);
+File file3 = new File(&quot;e:\\javaio&quot;,&quot;日记1.txt&quot;);
+if(!file2.exists())
+	try {
+		file2.createNewFile();//创建文件
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+else 
+	file2.delete();//删除文件
+         //常用的File对象的API
+System.out.println(file);//file.toString()的内容 F:\临时文档\958032738
+System.out.println(file.getAbsolutePath());//绝对地址 F:\临时文档\958032738
+System.out.println(file.getName());//文件（夹）名   958032738
+System.out.println(file.getParent());//父文件夹 toString F:\临时文档
+System.out.println(file.getParentFile().getAbsolutePath());//F:\临时文档
+//列出该目录下的所有文件(夹) 返回的是文件(夹)的名字数组(非路径)
+String filenames[] = file.list();
+for(String filename:filenames)
+    System.out.println(filename);
+</code></pre></div><blockquote><p>目录文件遍历</p></blockquote> <div class="language- extra-class"><pre><code>void listDirectory(File dir) throws IOException {
+	// 如果要遍历子目录下的内容，可以判断是否是子目录再递归，File提供了直接返回file对象的api
+	File[] files = dir.listFiles();
+	if (files != null &amp;&amp; files.length &gt; 0) {
+		for (File mFile : files) {
+			if (mFile.isDirectory()) {
+				listDirectory(mFile);
+			} else {
+				System.out.println(mFile);
+			}
+		}
+	}
+}
+</code></pre></div><blockquote><p>使用文件(夹)名过滤器<code>FilenameFilter</code> 去除db结尾的文件</p></blockquote> <div class="language- extra-class"><pre><code>	File[] files2 = file.listFiles(new FilenameFilter() {
+		
+		public boolean accept(File dir, String name) {
+			// TODO Auto-generated method stub
+			if(name.length()&gt;0&amp;&amp;name.endsWith(&quot;db&quot;))
+				return false;
+			return true;
+		}
+	});
+	for (File mFile : files2) {
+		System.out.println(mFile);
+	}
+</code></pre></div><blockquote><p>文件过滤器<code>FileFilter</code>，pathname是file对象，可以直接处理</p></blockquote> <div class="language- extra-class"><pre><code>	File[] files = file.listFiles(new FileFilter() {
+
+		public boolean accept(File pathname) {
+			// TODO Auto-generated method stub
+			if (pathname.isDirectory())
+				return false;
+			return true;
+		}
+	});
+	for (File mFile : files) {
+		System.out.println(mFile);
+	}
+</code></pre></div><h2 id="randomaccessfile"><a href="#randomaccessfile" class="header-anchor">#</a> <code>RandomAccessFile</code></h2> <p>java提供的对文件内容的访问，既可以读文件，也可以写文件。
+<code>RandomAccessFile</code>支持随机访问文件，可以访问文件的任意位置</p> <p><strong>(1)java文件模型</strong>
+在硬盘上的文件是byte byte byte存储的,是数据的集合
+<strong>(2)打开文件</strong>
+有两种模式&quot;rw&quot;(读写)  &quot;r&quot;（只读)</p> <div class="language- extra-class"><pre><code>RandomAccessFile raf = new RandomeAccessFile(file,&quot;rw&quot;)
+</code></pre></div><p>文件指针，打开文件时指针在开头 <code>raf.getFilePointer() = 0;</code></p> <p><strong>(3) 写方法</strong> <code>raf.write(int)</code>---&gt;只写一个字节（后8位),同时指针指向下一个位置，准备再次写入</p> <div class="language- extra-class"><pre><code>        int i = 0x7fffffff;
+        //用write方法每次只能写一个字节，如果要把i写进去就得写4次
+		raf.write(i &gt;&gt;&gt; 24);//高8位
+		raf.write(i &gt;&gt;&gt; 16);
+		raf.write(i &gt;&gt;&gt; 8);
+		raf.write(i);
+        //或者用封装好的，源码其实也是上面的实现
+        //可以直接写一个int
+        raf.writeInt(i);
+        //写入带编码的字符串
+        String s=&quot;中&quot;;
+        byte utf[]=s.getBytes(&quot;UTF-8&quot;);
+        raf.write(utf);
+</code></pre></div><p><strong>(4)读方法</strong> <code>int b = raf.read()</code>---&gt;读一个字节</p> <blockquote><p>注：要读出与写入一样的数据和类型，怎么写入的就怎么读,参考<code>(6)</code></p></blockquote> <p><strong>(5)文件读写完成以后一定要关闭<code>raf.close()</code></strong></p> <p><strong>(6)<code>序列化与基本类型序列化</code></strong>
+1）将<strong>类型int</strong> 转换成<code>4byte</code>或将<strong>其他数据类型</strong>转换成<code>byte</code>的过程叫**<code>序列化</code>**</p> <div class="language- extra-class"><pre><code>数据----&gt;n byte
+</code></pre></div><p>2)<strong><code>反序列化</code></strong>
+将<code>n个byte</code> 转换成一个<strong>数据</strong>的过程</p> <div class="language- extra-class"><pre><code>nbyte ---&gt; 数据
+</code></pre></div><p>3)<code>RandomAccessFile</code>提供基本类型的读写方法，可以将<code>基本类型数据序列化到文件</code>或者将<code>文件内容反序列化为数据</code></p> <div class="language- extra-class"><pre><code>public class RafSeriaTest {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		File demo = new File(&quot;demo1&quot;);
+		if(!demo.exists())demo.mkdir();
+		File file = new File(demo,&quot;raf.dat&quot;);
+		if(file.exists())
+			file.delete();
+		if(!file.exists())
+			file.createNewFile();
+		//打开文件，进行随机读写
+		RandomAccessFile raf = new RandomAccessFile(file, &quot;rw&quot;);
+		/*序列化*/
+		String s=&quot;helloworld&quot;;
+		byte buf[]=s.getBytes(&quot;UTF-8&quot;);
+		raf.write(buf);
+		System.out.println(raf.getFilePointer());
+		int i=454651234;
+		raf.writeInt(i);
+		System.out.println(raf.getFilePointer());
+		
+		
+		/*反序列化*/
+		raf.seek(0);
+		byte buf2[]=new byte[10];
+		raf.read(buf2);
+		System.out.println(new String(buf2));
+		int b=raf.readInt();
+		System.out.println(b);
+		raf.close();
+	}
+
+}
+/*
+output:
+10
+14
+helloworld
+1679497581
+*/
+</code></pre></div><p>遇到skipBytes函数，看下源码</p> <div class="language- extra-class"><pre><code>/**
+     * Attempts to skip over {@code n} bytes of input discarding the
+     * skipped bytes.
+     * 尝试跳过n个字节，然后通过seek去修改当前文件指针位置
+     *
+     * This method may skip over some smaller number of bytes, possibly zero.
+     * This may result from any of a number of conditions; reaching end of
+     * file before {@code n} bytes have been skipped is only one
+     * possibility. This method never throws an {@code EOFException}.
+     * The actual number of bytes skipped is returned.  If {@code n}
+     * is negative, no bytes are skipped.
+     *
+     * @param      n   the number of bytes to be skipped.
+     * @return     the actual number of bytes skipped.
+     * @exception  IOException  if an I/O error occurs.
+     */
+    public int skipBytes(int n) throws IOException {
+        long pos;
+        long len;
+        long newpos;
+        //负数或0则不跳
+        if (n &lt;= 0) {
+            return 0;
+        }
+        pos = getFilePointer();//当前文件指针位置
+        len = length();//naive方法，返回当前文件长度
+        newpos = pos + n;//新位置
+        //ex:pos=3,len=10,n=4 -&gt;newpos=7 seek(7) return 4
+        //如果相加&gt;len :pos=3,len=10,n=9 -&gt;newpos=10 seek(10) return 7 no 9
+        if (newpos &gt; len) {
+            newpos = len;
+        }
+        seek(newpos);
+
+        /* 返回实际跳过的字节数 */
+        return (int) (newpos - pos);
+    }
+</code></pre></div><h2 id="字节流"><a href="#字节流" class="header-anchor">#</a> <strong><code>字节流</code></strong></h2> <ol><li><p><strong>InputStream、OutputStream</strong>
+InputStream抽象了应用程序读取数据的方式
+OutputStream抽象了应用程序写出数据的方式</p></li> <li><p>EOF = End   读到-1就读到结尾</p></li> <li><p><strong>输入流基本方法(读)</strong></p> <p>int  b = in.read();读取一个字节无符号填充到int低八位.-1是 EOF
+in.read(byte[] buf) 将读入数据填充到buf字节数组
+in.read(byte[] buf,int start,int size)</p></li> <li><p><strong>输出流基本方法(写)</strong></p> <p>out.write(int b)  写出一个byte到流，b的低8位
+out.write(byte[] buf)将buf字节数组都写入到流
+out.write(byte[] buf,int start,int size)</p></li> <li><p><code>FileInputStream</code>---&gt;具体实现了在文件上读取数据</p> <div class="language- extra-class"><pre><code>/*
+ * 读取指定文件内容以16进制输出，每20byte换行
+ * 注：单字节不适合读取大文件数据
+ * */
+public static void printHex(String fileName)throws IOException{
+	FileInputStream in=new FileInputStream(fileName);
+	int b;
+	int index=1;
+	while((b=in.read())!=-1){
+		if(b&lt;=0xf){
+			//只有低4位，前补0
+			System.out.print(0);
+		}
+		System.out.print(Integer.toHexString(b)+&quot; &quot;);
+		if(index++%20==0)System.out.println();
+	}
+    in.close();
+}
+</code></pre></div><p>/**
+* 批量读取，对大文件而言效率高，也是我们最常用的读文件的方式
+* @param fileName
+* @throws IOException
+<em>/
+public static void printHexByByteArray(String fileName)throws IOException{
+FileInputStream in=new FileInputStream(fileName);
+byte buf[]=new byte[8</em>1024];//8kbytes的buf
+int index=1;
+/*从in中批量读取字节，放入到buf这个字节数组中，每个字节只存放低8位
+* 从第0个位置开始放，最多放buf.length个
+* 返回的是读到的字节的个数,or -1 如果没有更多的数据可以读取因为已经搜索到文件末尾(剩余数据大小&lt;=buf.length)
+*/
+int bytes=0;//读取的字节个数
+while((bytes=in.read(buf,0,buf.length))!=-1){
+for(int i=0;i&lt;bytes;i++){
+//(buf[i]&lt;=0xf&amp;&amp;buf[i]&gt;=0x0)将0x0 -&gt;0xf前补0 0xa0&lt;0
+//或者用buf[i] &amp; 0xff 判断
+//				System.out.print(((buf[i]&lt;=0xf&amp;&amp;buf[i]&gt;=0x0)?&quot;0&quot;+Integer.toHexString(buf[i]):Integer.toHexString(buf[i] &amp; 0xff) )+&quot; &quot;);//高位清0 避免错误
+System.out.print((((buf[i] &amp; 0xff)&lt;=0xf)?&quot;0&quot;+Integer.toHexString(buf[i]):Integer.toHexString(buf[i] &amp; 0xff) )+&quot; &quot;);//高位清0 避免错误
+if(index++%20==0)System.out.println();
+}
+}
+in.close();
+}</p></li> <li><p><code>FileOutputStream</code> 实现了向文件中写入byte数据的方法</p> <p>public class FileOutputStreamTest {
+public static void main(String[] args) throws IOException {
+//如果该文件不存在，则直接创建，如果存在，append为true则追加，false则删除后创建 (不指定 append 默认false删除后创建 )
+//FileOutputStream(String name, boolean append)
+FileOutputStream fos=new FileOutputStream(&quot;demo/out.dat&quot;);
+fos.write('A');//只有write方法，只写低八位
+//写int同样需要写4次
+int a = 10;//write只能写八位,那么写一个int需要些4次每次8位
+fos.write(a &gt;&gt;&gt; 24);
+fos.write(a &gt;&gt;&gt; 16);
+fos.write(a &gt;&gt;&gt; 8);
+fos.write(a);
+byte[] gbk = &quot;中国&quot;.getBytes(&quot;gbk&quot;);
+fos.write(gbk);
+fos.close();
+IOUtil.printHex(&quot;demo/out.dat&quot;);
+}
+}</p></li></ol> <blockquote><p>综合上诉两个demo 做一个复制文件的demo</p></blockquote> <div class="language- extra-class"><pre><code>/**
+	 * 文件拷贝，字节批量读取
+	 * @param srcFile
+	 * @param destFile
+	 * @throws IOException
+	 */
+	public static void copyFile(File srcFile,File destFile)throws IOException{
+		if(!srcFile.exists()){
+			throw new IllegalArgumentException(&quot;文件:&quot;+srcFile+&quot;不存在&quot;);
+		}
+		if(!srcFile.isFile()){
+			throw new IllegalArgumentException(srcFile+&quot;不是文件&quot;);
+		}
+		FileInputStream in = new FileInputStream(srcFile);
+		FileOutputStream out = new FileOutputStream(destFile);
+		byte[] buf = new byte[8*1024];
+		int b ;
+	    while((b = in.read(buf,0,buf.length))!=-1){
+	    	out.write(buf,0,b);
+	    	out.flush();
+	    }
+	    in.close();
+	    out.close();
+		
+	}
+</code></pre></div><ol start="7"><li>DataOutputStream/DataInputStream
+<strong>对&quot;流&quot;功能的扩展，可以更加方面的读取int,long，字符等类型数据</strong></li></ol> <blockquote><p>DataOutputStream</p></blockquote> <div class="language- extra-class"><pre><code>  DataOutputStream dos = new DataOutputStream(new FileOutputStream(file));
+    		dos.writeInt(10);
+    		dos.writeInt(-10);
+    		dos.writeLong(10l);
+    		dos.writeDouble(10.5);
+    		//采用utf-8编码写出
+    		dos.writeUTF(&quot;中国&quot;);
+    		//采用utf-16be编码写出
+    		dos.writeChars(&quot;中国&quot;);
+    		dos.close();
+</code></pre></div><blockquote><p>DataInputStream</p></blockquote> <div class="language- extra-class"><pre><code>DataInputStream dis = new DataInputStream(
+			   new FileInputStream(file));
+	   int i = dis.readInt();
+	   System.out.println(i);
+	   i = dis.readInt();
+	   System.out.println(i);
+	   long l = dis.readLong();
+	   System.out.println(l);
+	   double d = dis.readDouble();
+	   System.out.println(d);
+	   String s = dis.readUTF();
+	   System.out.println(s);
+	   
+       dis.close();
+</code></pre></div><ol start="8"><li><strong><code>BufferedInputStream / BufferedOutputStream</code></strong>
+这两个流类位IO提供了带缓冲区的操作，一般打开文件进行写入
+或读取操作时，都会加上缓冲，<strong>这种流模式提高了IO的性能</strong>
+从应用程序中把输入放入文件，相当于将一缸水倒入到另一个缸中:
+**FileOutputStream---&gt;write()**方法相当于一滴一滴地把水“转移”过去
+**DataOutputStream--&gt;writeXxx()**方法会方便一些，相当于一瓢一瓢把水“转移”过去
+<strong>BufferedOutputStream---&gt;write</strong>方法更方便，相当于一飘一瓢先放入桶中，再从桶中倒入到另一个缸中，性能提高了</li></ol> <p>几个复制文件的demo</p> <div class="language- extra-class"><pre><code>/**
+	 * 进行文件的拷贝，利用带缓冲的字节流
+	 * @param srcFile
+	 * @param destFile
+	 * @throws IOException
+	 */
+	public static void copyFileByBuffer(File srcFile,File destFile)throws IOException{
+		if(!srcFile.exists()){
+			throw new IllegalArgumentException(&quot;文件:&quot;+srcFile+&quot;不存在&quot;);
+		}
+		if(!srcFile.isFile()){
+			throw new IllegalArgumentException(srcFile+&quot;不是文件&quot;);
+		}
+		BufferedInputStream bis = new BufferedInputStream(new FileInputStream(srcFile));
+		BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(destFile));
+		int a;
+		while((a=bis.read())!=-1){
+			bos.write(a);
+			bos.flush();//刷新缓冲区，否则写入不到文件
+		}
+		bis.close();
+		bos.close();
+	}
+	/**
+	 * 进行文件的拷贝，利用带缓冲的字节流,以一定机制去刷新,而不是每次都去刷新
+	 * @param srcFile
+	 * @param destFile
+	 * @throws IOException
+	 */
+	public static void copyFileByBuffer2(File srcFile,File destFile)throws IOException{
+		if(!srcFile.exists()){
+			throw new IllegalArgumentException(&quot;文件:&quot;+srcFile+&quot;不存在&quot;);
+		}
+		if(!srcFile.isFile()){
+			throw new IllegalArgumentException(srcFile+&quot;不是文件&quot;);
+		}
+		BufferedInputStream bis = new BufferedInputStream(new FileInputStream(srcFile));
+		BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(destFile));
+		int a;
+		int index=0;
+		while((a=bis.read())!=-1){
+			
+			bos.write(a);
+			if(index++%10==0)
+			bos.flush();//刷新缓冲区，否则写入不到文件
+		}
+		bos.flush();
+		bis.close();
+		bos.close();
+	}
+</code></pre></div><p><strong><code>复制文件总结</code></strong></p> <ol><li>带buffer比不带buffer更快，每次都flush的话只快2-3倍左右</li> <li>带buffer，一定次数再flush比每次都flush快的多，测试：10次再flush比每次flush快10倍左右</li> <li>批量读取比单字节读取快的多，测试：buf[8*1024]比单字节快几千倍
+可以说最快的就是批量读取+一定次数再flush
+不过 对于大文件操作，直接利用加大批量读取即可，一定次数再flush可以说是多此一举了对于内存利用来说。</li></ol> <h2 id="字符流"><a href="#字符流" class="header-anchor">#</a> <strong><code>字符流</code></strong></h2> <ol><li>编码问题</li> <li>认识文本和文本文件
+java的<strong>文本</strong>(char)是16位无符号整数，unicode编码（双字节编码)
+<strong>文件</strong>是byte byte byte ...的数据序列
+<strong>文本文件</strong>是文本(char)序列按照某种编码方案(utf-8,utf-16be,gbk)序列化为byte的存储结果</li> <li><strong>字符流(Reader Writer)</strong>----&gt;操作的是文本文件
+字符的处理，一次处理一个字符
+字符的底层仍然是基本的字节序列
+字符流的基本实现</li></ol> <blockquote><p>InputStreamReader   完成byte流解析为char流,按照编码解析
+OutputStreamWriter  提供char流到byte流，按照编码处理</p></blockquote> <div class="language- extra-class"><pre><code>   public class IsrAndOswDemo {
+	public static void main(String[] args)throws IOException {
+		FileInputStream in = new FileInputStream(&quot;e:\\javaio\\a.txt&quot;);
+		InputStreamReader isr = new InputStreamReader(in,&quot;utf-8&quot;);//默认是项目的编码,操作的时候，要写文件本身的编码格式
+	
+		FileOutputStream out = new FileOutputStream(&quot;e:\\javaio\\b.txt&quot;);
+		OutputStreamWriter osw = new OutputStreamWriter(out,&quot;utf-8&quot;);
+		/*int c ;
+		while((c = isr.read())!=-1){
+			System.out.print((char)c);
+		}*/
+		char[] buffer = new char[8*1024];
+		int c;
+		/*批量读取，放入buffer这个字符数组，从第0个位置开始放置，最多放buffer.length个
+		  返回的是读到的字符的个数
+		*/
+		while(( c = isr.read(buffer,0,buffer.length))!=-1){
+			String s = new String(buffer,0,c);
+			System.out.print(s);
+			osw.write(buffer,0,c);
+			osw.flush();
+		}
+		isr.close();
+		osw.close();
+		
+	}
+
+}
+</code></pre></div><ol start="4"><li><strong>FileReader/FileWriter</strong></li></ol> <div class="language- extra-class"><pre><code>public class FrAndFwDemo {
+	public static void main(String[] args) throws IOException {
+		//不存在则创建，存在非追加则删除重建
+		FileReader fr = new FileReader(&quot;demo\\file.txt&quot;);
+		FileWriter fw = new FileWriter(&quot;demo\\file2.txt&quot;);
+		char[] buf=new char[1024];
+		int c;
+		while((c=fr.read(buf,0,buf.length))!=-1){
+			fw.write(buf,0,c);
+			fw.flush();
+		}
+		fr.close();
+		fw.close();
+	}
+}
+</code></pre></div><p>**<code>存在的问题</code>：**FileReader/FileWriter 构造函数没有指定编码格式。
+如项目编码是UTF-8,file.txt是gbk,则file2.txt编码与项目编码一致，故会产生乱码。
+**解决方法：**用InputStreamReader / OutputStreamReader     或者 操作文件编码与项目编码一致</p> <ol start="5"><li><p><strong>字符流的过滤器</strong>
+BufferedReader   ----&gt;readLine 一次读一行
+BufferedWriter/PrintWriter   ----&gt;写一行</p> <p>public class BrAndBwOrPwDemo {
+public static void main(String[] args) throws IOException {
+//对文件进行读写操作
+BufferedReader br=new BufferedReader(
+new InputStreamReader(
+new FileInputStream(&quot;demo\file.txt&quot;)));
+BufferedWriter bw=new BufferedWriter(
+new OutputStreamWriter(
+new FileOutputStream(&quot;demo\file3.txt&quot;)));
+String line=&quot;&quot;;
+while((line=br.readLine())!=null){
+System.out.println(line);//一次读一行，不带换行，手动加上
+bw.write(line);
+bw.newLine();//写入一个'\n'
+bw.flush();
+}
+br.close();
+bw.close();
+}
+}</p></li></ol> <p>若改使用PrintWriter会更方便</p> <div class="language- extra-class"><pre><code>public void usePrint() throws IOException {
+		// 对文件进行读写操作
+		BufferedReader br = new BufferedReader(new InputStreamReader(
+				new FileInputStream(&quot;demo\\file.txt&quot;)));
+		PrintWriter pw=new PrintWriter(&quot;demo\\file4.txt&quot;);
+		String line = &quot;&quot;;
+		while ((line = br.readLine()) != null) {
+			System.out.println(line);// 一次读一行，不带换行，手动加上
+			//pw还有append,format,write,print等函数
+			pw.println(line);
+			pw.flush();
+		}
+		br.close();
+		pw.close();
+	}
+</code></pre></div><h2 id="对象的序列化-反序列化"><a href="#对象的序列化-反序列化" class="header-anchor">#</a> <strong><code>对象的序列化，反序列化</code></strong></h2> <ol><li><strong>对象序列化，就是将Object转换成byte序列，反之叫对象的反序列化</strong></li> <li><code>序列化流(ObjectOutputStream)</code>,是过滤流----writeObject
+<code>反序列化流(ObjectInputStream)</code>---readObject</li></ol> <blockquote><p>主要是读写对象，当然extends OutputStream所以OutputStream的基本方法也可以使用</p></blockquote> <blockquote><p>Student.class</p></blockquote> <div class="language- extra-class"><pre><code>public class Student implements Serializable{
+	private String stuno;
+	private String stuname;
+	private int stuage;  
+public Student(String stuno, String stuname, int stuage) {
+		super();
+		this.stuno = stuno;
+		this.stuname = stuname;
+		this.stuage = stuage;
+	}
+@Override
+public String toString() {
+	return &quot;Student [stuno=&quot; + stuno + &quot;, stuname=&quot; + stuname + &quot;, stuage=&quot;
+			+ stuage + &quot;]&quot;;
+}
+}
+</code></pre></div><blockquote><p>序列化和反序列化</p></blockquote> <div class="language- extra-class"><pre><code>public class ObjectSeriaDemo1 {
+	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
+		String file=&quot;demo/obj.dat&quot;;
+		//序列化
+		ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream(file));
+		Student stu=new Student(&quot;1&quot;, &quot;gahingZ&quot;, 21);
+		oos.writeObject(stu);
+		oos.flush();
+		oos.close();
+		//反序列化
+		ObjectInputStream ois=new ObjectInputStream(new FileInputStream(file));
+		Student mStu=(Student) ois.readObject();
+		System.out.println(mStu.toString());
+	}
+}
+output:
+Student [stuno=1, stuname=gahingZ, stuage=21]
+</code></pre></div><ol start="3"><li><p><strong>序列化接口(Serializable)</strong>
+对象必须实现序列化接口 ，才能进行序列化，否则将出现异常
+这个接口，没有任何方法，只是一个标准</p></li> <li><p><strong>transient关键字</strong></p> <p>//该元素不会进行jvm默认的序列化
+//Student类不想让stuage序列化
+private transient int stuage;</p></li></ol> <blockquote><p>再次运行ObjectSeriaDemo1</p></blockquote> <div class="language- extra-class"><pre><code>   output:
+    Student [stuno=1, stuname=gahingZ, stuage=0]
+</code></pre></div><blockquote><p>0是int的默认值，用这种方式就可以简单的让某些元素不被序列化</p></blockquote> <p><em><strong>分析ArrayList源码中序列化和反序列化的问题</strong></em></p> <div class="language- extra-class"><pre><code>transient Object[] elementData; // non-private to simplify nested class access
+//该元素是已开辟的数组，存入的数据长度一般是不满的，so不需要进行序列化 用transient 修饰,否则整个都序列化性能太差，eq:开辟了10000的数组 却只存了1个元素
+
+如果要手动序列化，则Studnt类加入以下方法
+
+ private void writeObject(java.io.ObjectOutputStream s)
+		        throws java.io.IOException{
+		 s.defaultWriteObject();//把jvm能默认序列化的元素进行序列化操作
+		 s.writeInt(stuage);//自己完成stuage的序列化
+	 }
+	 private void readObject(java.io.ObjectInputStream s)
+		        throws java.io.IOException, ClassNotFoundException{
+		  s.defaultReadObject();//把jvm能默认反序列化的元素进行反序列化操作
+		  this.stuage = s.readInt();//自己完成stuage的反序列化操作
+	}
+</code></pre></div><blockquote><p>再次运行ObjectSeriaDemo1</p></blockquote> <div class="language- extra-class"><pre><code>   output:
+    Student [stuno=1, stuname=gahingZ, stuage=21]
+</code></pre></div><p>当然上面这样写没有什么意义(要序列化呢还是不序列化呢)，
+所以一般要写writeObject方法的都是数组元素非整个序列化，序列化的个数是动态的。
+那么，让我们分析ArrayList中的写法</p> <div class="language- extra-class"><pre><code>private void writeObject(java.io.ObjectOutputStream s)
+        throws java.io.IOException{
+        // Write out element count, and any hidden stuff
+        int expectedModCount = modCount;
+        s.defaultWriteObject();//默认的都序列化了
+
+        // Write out size as capacity for behavioural compatibility with clone()
+        s.writeInt(size);
+
+        // elementData只放了size个 所以就只序列化size个 而不是elementData.length
+        for (int i=0; i&lt;size; i++) {
+            s.writeObject(elementData[i]);
+        }
+        //并发操作异常
+        if (modCount != expectedModCount) {
+            throw new ConcurrentModificationException();
+        }
+    }
+</code></pre></div><ol start="5"><li>序列化中 <strong>子类和父类构造函数的调用问题</strong></li></ol> <blockquote><p><strong>一个类实现了序列化接口，其子类都可以序列化</strong> <strong>子类在反序列化时，从最顶级父类开始往下找(递归)，若父类实现了序列化接口，则不会递归调用其构造函数，否则其父类的构造函数会被调用</strong></p></blockquote> <div class="language- extra-class"><pre><code>package com.france;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+class Bar{
+	Bar(){
+		System.out.println(&quot;Bar..&quot;);
+	}
+}
+class Bar1 extends Bar{
+	Bar1(){
+		System.out.println(&quot;Bar1..&quot;);
+	}
+}
+class Bar2 extends Bar1 implements Serializable{
+	public Bar2(){
+		System.out.println(&quot;Bar2..&quot;);
+	}
+}
+class Bar3 extends Bar2{
+	public Bar3(){
+		System.out.println(&quot;Bar3..&quot;);
+	}
+}
+class Bar4 extends Bar3{
+	public Bar4(){
+		System.out.println(&quot;Bar4..&quot;);
+	}
+}
+public class ObjectSeriaDemo2 {
+	
+	public static void main(String[] args) throws FileNotFoundException, ClassNotFoundException, IOException {
+		test1();
+		test2();
+	}
+	static void test1()throws FileNotFoundException, IOException, ClassNotFoundException {
+		ObjectOutputStream oos = new ObjectOutputStream(
+				new FileOutputStream(&quot;demo/obj1.dat&quot;));
+		Bar2 bar2=new Bar2();
+		oos.writeObject(bar2);
+		System.out.println(&quot;---------&quot;);
+		oos.flush();
+		oos.close();
+		
+		ObjectInputStream ois = new ObjectInputStream(
+				new FileInputStream(&quot;demo/obj1.dat&quot;));
+		Bar2 mBar2=(Bar2) ois.readObject();
+		System.out.println(mBar2);
+		ois.close();
+		System.out.println(&quot;---------&quot;);
+	}
+	static void test2()throws FileNotFoundException, IOException, ClassNotFoundException {
+		ObjectOutputStream oos = new ObjectOutputStream(
+				new FileOutputStream(&quot;demo/obj2.dat&quot;));
+		Bar4 bar4=new Bar4();
+		oos.writeObject(bar4);
+		System.out.println(&quot;---------&quot;);
+		oos.flush();
+		oos.close();
+		
+		ObjectInputStream ois = new ObjectInputStream(
+				new FileInputStream(&quot;demo/obj2.dat&quot;));
+		Bar4 mBar4=(Bar4) ois.readObject();
+		System.out.println(mBar4);
+		ois.close();
+		System.out.println(&quot;---------&quot;);
+	}
+}
+</code></pre></div><blockquote></blockquote> <div class="language- extra-class"><pre><code>output:
+Bar..
+Bar1..
+Bar2..
+---------
+Bar..
+Bar1..
+com.france.Bar2@3d4eac69
+---------
+Bar..
+Bar1..
+Bar2..
+Bar3..
+Bar4..
+---------
+Bar..
+Bar1..
+com.france.Bar4@1b6d3586
+---------
+</code></pre></div><p>即[Bar、Bar1不可序列化] Bar2实现序列化接口 并且 Bar3/Bar4都可序列化</p> <p>可序列化的子类 2-4 在<code>进行反序列化时，会递归调用 不可序列化父类的构造函数</code></p></div></div>  <div class="page-edit"><div class="edit-link"><a href="https://github.com/francecil/blog/edit/master/docs/02.服务端/编程语言/Java/_Java IO.md" target="_blank" rel="noopener noreferrer">编辑</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2023/04/16, 18:50:16</span></div></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/52f49b/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">Java Executors 学习笔记</div></a> <a href="/pages/0a38aa/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">Java NIO</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/52f49b/" class="prev">Java Executors 学习笔记</a></span> <span class="next"><a href="/pages/0a38aa/">Java NIO</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/57474a/"><div>
+            如何部署博客
+            <!----></div></a> <span class="date">04-15</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/195887/"><div>
+            给网站添加一只看板娘
+            <!----></div></a> <span class="date">04-15</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/094eb3/"><div>
+            博客评论踩坑记录
+            <!----></div></a> <span class="date">04-14</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:396324491@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/francecil" title="GitHub" target="_blank" class="iconfont icon-github"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2016-2023
+    <span>Gahing | <a href="http://www.beian.gov.cn" target="__blank">闽ICP备19024221号-1</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <div class="body-bg" style="background:url() center center / cover no-repeat;opacity:0.5;"></div> <!----> <!----></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.dc012a4b.js" defer></script><script src="/assets/js/2.237b9688.js" defer></script><script src="/assets/js/3.e227eb2c.js" defer></script><script src="/assets/js/200.8b614718.js" defer></script>
+  </body>
+</html>
