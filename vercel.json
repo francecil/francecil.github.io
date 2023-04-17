@@ -1,13 +1,22 @@
 {
-    "headers": [
-      {
-        "source": "(.*)",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "public, s-maxage=86400, max-age=86400"
-          }
-        ]
-      }
-    ]
-  }
+  "headers": [
+    {
+      "source": "/service-worker.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, s-maxage=600, max-age=600"
+        }
+      ]
+    }
+  ]
+}
