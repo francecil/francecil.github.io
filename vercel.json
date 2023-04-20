@@ -10,11 +10,11 @@
       ]
     },
     {
-      "source": ".*",
+      "source": "/assets/:any",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, s-maxage=600, max-age=600"
+          "value": "public, maxage=2592000, s-maxage=2592000, stale-while-revalidate=31536000"
         }
       ]
     }
