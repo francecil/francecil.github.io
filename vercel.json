@@ -10,5 +10,5 @@
       ]
     }
   ],
-  "redirects": [{ "source": "/me", "destination": "/about" }]
+  "rewrites": [{ "source": "/me2", "destination": "/about" }]
 }
