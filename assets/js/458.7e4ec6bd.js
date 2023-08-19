@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[458],{1221:function(t,s,n){"use strict";n.r(s);var e=n(27),i=Object(e.a)({},(function(){var t=this._self._c;return t("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[t("p",[this._v("https://zh.wikipedia.org/zh-hans/%E4%BA%94%E5%8A%9B%E5%88%86%E6%9E%90")])])}),[],!1,null,null,null);s.default=i.exports}}]);
