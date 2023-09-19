@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[470],{1239:function(t,s,i){"use strict";i.r(s);var n=i(27),o=Object(n.a)({},(function(){var t=this._self._c;return t("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[t("p",[this._v("https://wiki.mbalib.com/wiki/SCP%E5%88%86%E6%9E%90%E6%A8%A1%E5%9E%8B")])])}),[],!1,null,null,null);s.default=o.exports}}]);
